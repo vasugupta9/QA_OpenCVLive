@@ -8,5 +8,5 @@ OpenCV Live Youtube channel - https://www.youtube.com/playlist?list=PLVAmZHkJYC2
 | 123 | 8 | 8 |
 | 129 | CMUcam 4 | CMU cam | 
 
-Please note above generated answers might get updated in the future based on testing on more transcripts with new better prompts, etc 
+Please note above generated answers might get updated in the future based on testing on more transcripts with newer better prompts, etc 
 
