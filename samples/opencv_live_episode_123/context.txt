@@ -1,0 +1,637 @@
+YouTube LinkedIn twitch Twitter Facebook uh YouTube I think I heard did
+I already say YouTube hello there everybody this is open CV live I hope you enjoyed the
+break don't expect it to happen
+again and we're live everywhere so as you join us please tell
+us where you're joining us from uh we love to see the open CB Community chime in in the comments wherever you're
+watching on the wide world of Al Gore's internet I am of course coming to you from beautiful downtown San Francisco
+California The Fragrant Som neighborhood and our stalbert host Dr sachu Malik is coming to us from from San Diego yet
+again good old San Diego the weather has been really nice
+for the last few days after the rains yeah the rain uh it's been the weather's
+been interesting here in San Francisco it's alternating between some of the nicest days we've had in a long time and
+uh really foggy foggy rain you know yeah hello France hello Brazil hello Nigeria
+Portugal more France Brazil Romania from awesome Nigeria uh
+Switzerland Cyprus Mexico Canada Bolivia India Chicago Iran Ghana wow Poland
+yes another another downtown San Francisco I hello Irvine California
+cashmir Great lead Zeppelin song um yeah there's there's 20 of you
+folks watching on YouTube right now I'm not sure let's take a look at the numbers on LinkedIn 97 strong on
+LinkedIn we love to see it folks we just passed I think 16,000 subscribers on
+YouTube which is a a big number for us us thanks to everybody and because we just started I mean even though we have
+been doing this for a while we had not started our YouTube channel we were using open cv. YouTube channel to host
+these uh but now we have a separate uh opencv live YouTube channel that's right
+and we've actually eclipsed the the subscriber count on that old Channel by by like twice over now so super awesome
+hello Mumbai Atlanta Georgia New Mexico Ethiopia Santa
+Cruz Switzerland treaty 6 territory in Canada
+Philly Philly wow Mountain View California big
+crowd showing up today we are nearly 100 we'll just wait for another minute or so
+uh before we start um yeah just give us a second to let let the flop sweat dry a little bit you know
+yeah right uh we are more than 100 on Zoom we are about 100 on LinkedIn I
+think and some a few on YouTube great yeah 27 on YouTube it's over we have
+about 225 of you watching right now all right and today we are going to have a very exciting session uh you know we
+decided to do a tutorial which we have not done in a while and we are going to cover gase tracking if you don't know
+anything about gase tracking this is the right tutorial for you uh so uh I think
+we can get started now right yeah go for it boss hello everybody this is opencv
+live I'm your host Satya Malik CEO of open cv. org and today we are going to
+cover the topic of gaze tracking which has become very common now with apple
+Vision Pro and meta quest uh you know Quest and Quest Pro which have gase
+tracking so that you can control uh the screen or the virtual screen on uh using
+using your eyes right and uh as always uh with me is uh Phil Nelson who is is
+the director of content and creative at opencv Phil organizes this show and if
+anything goes wrong it's his fault that's right if anything goes wrong it's usually my fault I am your
+co-host with the coost the second banana who is second to none I'm also your plus one and only it's Mr Nelson if you're
+nasty but my dear friends here on open CV live can call me Phil and I'm here to remind you of a few things we do on
+every single episode of this show this is 123 if you're counting out there one of the things we do on this show is a
+giveaway to you in the audience stay tuned later in the episode I will be asking a trivia question I make up
+during the show and the first person to answer that question in the zoom chat will win the open CV course of their
+choosing now we launched open CV University at cvpr last year and it's been very successful and popular so far
+we love giving away these courses to people that need them to help them in their careers and they can go out and tell people how useful the courses were
+and and and then you know maybe those people go buy a course so even if you don't win today go check out what courses are available at open cv. orgun
+University if you're not in the zoom chat which I must remind you is the only way to win a course today you can get
+there by going to open cv. live that's open cv. we are also taking questions from
+you in the audience use the zoom Q&A button at the bottom of the screen or type your question into the chat system
+wherever you're watching we're live on YouTube LinkedIn twitch Twitter Facebook
+and probably some others that we don't even know about hopefully if we're popular enough somebody is pirating this stream back to you SAA thank you yeah so
+you know uh I'll I'll talk about gaze tracking and I just bought this uh Apple Vision Pro you can see
+here yeah looks glossy and expensive because it is glossy and
+expensive so uh sometimes you can judge a book by its cover that's true and one
+of the things I realized ized is that you know um these devices have extremely
+good gauge tracking now like when I when you use it you feel that you're living in the future right you can actually uh
+the way uh Apple Vision Pro works is um you you know you put on this display and
+you see your room inside your room you see uh some objects right you could be
+looking at uh a collection of icons to uh you know for applications right and
+the way you work it works is that you look at the icon in the inside this virtual environment you just stare at it
+and then you pinch your fingers right uh you know you tap your finger like that and that is the selection and tapping so
+you select icons using your gaze for that kind of application The Gaze needs
+to be extremely extremely accurate right and uh you can also type using uh your
+gaze they show up a show a keyboard and you look at a particular um you know
+particular uh uh character and then you do tap and it selects that character and
+you can tap it's not very efficient but this is also the way uh Gaz tracking was
+invented because you know people who could not uh did not have um good use of
+their hands or did not have hands they could use the computer without actually using their hands so that is how gaze
+tracking uh was used to work right you could just stare at yeah I've got I've got a quick drop in
+here which um some people know some people watching in fact may may have worked there with me but um I worked at
+a company called occipital for many years and we worked on a an early iPhone
+based headset called bridge I actually designed the logo and did a bunch of other stuff thanks so much to my friend
+Jesse for collaborating with me on that um but that was uh we actually were using that term spatial Computing back
+then to to describe what we were doing and in fact all of the almost all of the
+experiences with Bridge headset worked very similarly to how uh Apple Vision
+Pro Works which is we would do a quick sort of capture of the space to to help
+uh with with positional tracking and blah blah even if you weren't going to be using the space and then you could
+you know use that space for games or to put up a screen or a video or even a
+teleconference with someone in a different space and see their space through your through your headset and so
+it's super gratifying like seven years later to see that like okay we were on
+the right track we were just a little bit too early yeah so and but some of that team in fact went to Apple to work
+on the Apple Vision Pro so yeah shout out to John Amir Pat Uh Forest I think
+there's a few others out there but uh I hope I hope you're all well it's been a while yeah it's uh it's amazing
+technology so let's uh let's dive into what is inside how it works even the definition some people may not uh I mean
+when I first started I had many different views understanding of gaze tracking so let's let's start okay uh so
+hopefully people are able to see my screen please let me know yes looks great in the chat okay great uh so gaze
+tracking you know uh just before we start I just want to give a quick introduction for people who may not be
+familiar uh my name is Sacha Malik uh I have a short career in terms of the number of companies I have worked with
+in 20 7 right after of my PhD I started a company called site Commerce Inc also
+called TS it was a computer vision and uh it was a computer vision company for
+the beauty and fashion industry women could upload a picture and apply makeup virtually and this was a pretty big hit
+at that time uh but you know uh we had you know uh opra magazine covered us and
+we were InStyle magazine People magazine all these people were our um our clients
+so uh technically it was doing very well uh and this was back in 2006 2007 uh
+Adobe Flash technology but uh still people had a lot of fun uh with the tech
+technique but uh as I have mentioned several times uh commercially this was a
+super duper flop for me I made Z million dollars from this company uh but great
+learning experience as they say yeah if I had a million dollars for every time I made zero million dollars boy
+had uh in 2014 I decided to start big Vision
+LLC this is a computer vision and a machine learning consulting company and we are celebrating our 10year
+anniversary uh this year uh in fact in February February 3rd we we turned 10
+years old and it's a big achievement for us because initially that was two days after I turned 41 years old oh wow
+congratulations yeah congratulations to Big Vision hokey smokes yeah and uh you know this uh
+company I started without any external funding initially it was just to do my Consulting work but now we are about 80
+people or so and part of it is uh you know the course business and the other is the Consulting
+business and then uh we I became the CEO of open cv. org in 2019 and now I have
+these dual roles uh CEO of open cv. org which is my uh charity work right
+because I don't get uh I I uh this is not what makes money for me or anything uh you know this is something that I
+really love doing uh serving the community and uh big vision is the one that pays the bills right yeah you and
+me both boss all right so big Vision um I'm not
+going to go uh deep into the company or anything like that but it is a computer vision and AI consulting services
+company if you have a project that needs help with computer vision please reach out to us um bigv vision. contacts at
+bigv vision. um Ai and to check out some case studies you can go and uh check out this link
+that I have shared here and that's all about big Vision now we'll deep uh dive into the main topic okay so the talk
+outline uh I have divided the talk into four parts first of of all I'll cover the problem statement what is gaze
+tracking the secondly we'll go over how is the ground Truth for gaze tracking uh
+you know uh covered right so uh when you want to uh create any neural
+network model or any AI model the very first thing is that you have to collect data and generate the ground truth and
+then you can use that data to uh train a model and it is not obvious right how do
+you even collect the data for gaze tracking so we'll cover that then we'll go over some uh data sets that are
+available publicly and then we'll talk about Gaz tracking algorithms right so
+very uh it covers a very Broad broad range of things and you don't need to
+have any understanding of any computer vision uh techniques or anything to uh
+understand this talk at the same time this talk is not uh you know I'm not going to go over programming of it I'll
+just talk about broad Concepts so that you get an idea of where things are and
+a quick note for the folks that have just joined us uh we are taking questions from the audience if you have them during any point in the show feel
+free to use the zoom questions and answers button or just type them into the chat system wherever you're watching
+and I'll do my best to make sure we surface those during the talk great um so gaze trackers there are
+two kinds of gaze trackers and now there are three kinds of uh gaze trackers which is a combination of the two but
+let's go over the two basic ones and then you know Apple Vision Pro and meta
+they combine the two into one so one is the screen based uh gaze trackers um and
+the idea here is that that you're looking at a screen you uh and you want to find the direction on the screen
+where exactly you're looking and this was very much applications oriented right uh marketeers and others they
+wanted to know uh looking at a website what are your hotpots where are you focusing on right or looking at a
+product catalog how is the catalog laid so that where are you looking at right
+so those kinds of things where the object you're looking at is a plane and uh you want to find where the eyes are
+looking at on this plane right it is a plane the second uh so basically you
+want the XY location on the screen the second one is u a variable uh
+uh variable uh screen right now here also the uh the tracking is on an on an
+image plane so you can look at this thing called the screen camera on this variable device uh you're looking one
+from pupil labs and other by Toby Toby has uh many different kinds of uh you
+know variable devices and they are probably the leading uh manufacturers in this kind of uh uh variable uh ey
+trackers so here they also look the most like the Borg from Star Trek that's true
+um so what you're looking at here there are two cameras one is called the screen
+camera so this is capturing what your approximate approximately looking at because it is roughly at the center of
+uh of the two eyes and then there are other cameras which are tracking your eyelid eyelids right so you can see that
+um essentially you're tracking the Gaze on screens right either it is an image
+that you have acquired using this uh scene camera or you're directly looking at uh the screen right so it's a plane
+that you you want to find the Gaze on and uh you also have an ey tracking
+camera right so you have a camera here you can see you cannot see in this image
+but uh right here these things that are sticking out they have uh cameras and in
+this system you have the camera right here right and uh these cameras uh are
+really not you know a single camera usually they are multiple cameras but at the very least they consist of a camera
+and an IR LED right so this is not a single camera here you will have a
+camera and an LED and the LED is used to illuminate the eye because you could be
+looking at in very dark environments and these things are IR which means infrared
+because uh the human eye cannot perceive infrared so so you're projecting
+something onto the eye but uh you cannot see it right but the camera can see it
+the cameras are IR cameras they are sensitive to IR Rays so they can see
+everything but your vision is not um obstructed or you are not feeling
+uncomfortable because these are uh IRS right so that's that's the setup for
+these uh IR cameras now what does the image look like if you take a picture
+using these cameras the image looks something like this what you're looking at you you can see that uh you know you
+have the C uh you have the image and it looks grayscale right it is really in
+the a domain it is uh you know it is beyond the V visible spectrum but it
+still looks like a grayscale image which is great and you also see that light on the on the on the uh on the P not the
+pupil the uh this is coming off of the cornea uh which is a part of the eye
+that is covering the pupil uh and so here you can see the reflection of the
+IRL right uh and so these are typical images this uh this is actually this is not a
+typical image this is about the best quality image you can get um but you you get an idea what kind of image you
+capture okay so the Gaze estimation problem is reduced to this you have two
+cameras right or two screens so the first screen is this right or this is an
+image or a screen whatever it is and you have this image that you have captured using uh using the IR camera you need to
+figure out using this right using this image on the left alone right that's the only input
+you have what point what XY location in this image you're looking at so it's a
+two camera system you have two images the image on the left you need to use to find which point on the image on the
+right is the person looking at right so that is the Gaze estimation problem right very simple once you set it up uh
+in this way and the same thing holds true for your displays also right if you
+have a head-mounted display uh they are taking pictures of your eyes and uh you
+need to find inside this display screen where exactly we are looking
+okay and uh you know the same uh happens with uh the uh this different setup also
+uh you have a screen you have this uh this camera and IR LED located here you
+take a picture from this you need to estimate where exactly is the person gazing at right they could be looking at
+this uh point so that's uh that's the Gaze estimation problem interesting note from uh YouTube another benefit of
+infrared and why it's useful for this is that unlike visible light infrared will not cause your pupils to
+constrict okay okay I mean that makes sense um that makes sense hadn't thought
+of that yeah yeah I had not thought about that but that now makes sense shout out to Gabriel and YouTube for
+that one all right okay so in apple Vision Pro where are these things located I actually uh
+started when I got this the very first one of the very first things I did was I started counting the cameras there are
+12 cameras of which I could find only eight because these u a cameras are
+located inside I I've you know I've tried to shine light into it and try to figure out but they are not visible at
+least not to me uh through uh through these but I got this uh from the URL
+that I am showing and I think Apple may have released this thing at some point uh last year so you can see that there
+are two IR cameras not just one but uh per eye and so there are four IR cameras
+so out of the 12 cameras four cameras are dedicated for just uh ey tracking uh
+that's how important the problem is right and you can see that there are these uh LED lights all over um you know
+surrounding that and so you'll see several LED lights not just uh one that illuminates the and that is why you know
+all these things extra cameras extra lights they all uh make sure that the quality is really good
+right now okay so you can imagine right Apple Vision Pro is both variable but it
+also has a screen so it's a combination of the two it do actually if you think about it as much closer to the screen
+system than the variable system right because we are not looking at U at a
+camera view of the outside uh but it's actually a combination of both both
+those systems Now Toby Vis Pro uh also looks
+very you know interesting so these are glasses that you can use um and if
+you're looking at the real world let's say you're uh reading a newspaper uh you can use these glasses to see where uh
+the person was looking at and these are used by all kinds of research agencies who want to see you know let's say
+you're walking down a shopping aisle uh looking at different products what products uh you know uh grab your
+attention what is the person looking at so they would uh you know they'll put these people in the field to just go
+around shopping malls they will uh or even if you're doing marketing they would look at pamphlets Etc to see where
+people's gaze is going what is drawing their attention Etc and here also you can see that uh the system consists of
+one scene camera as I had mentioned there are two cameras for uh these
+cameras are looking inward into your eye but uh you can see that there are two cameras per eye uh that are looking into
+your eye for uh gaze tracking and these other things which are not marked in blue these other things are LED lights
+that illuminate the eye so the lights are also very very important and you can see that people use multiple of those so
+um you can go to this and see a demo of this how it works uh pretty fascinating
+device and you can record this on your computer so the question is you know how
+do you even get ground Truth for training such a system right the easy answer is that you know uh you have a
+screen right and you ask people to fixate at a point right you say that
+okay we know the location of this point you could be uh showing them a target a pulsating Target sometimes so that they
+attention is going to that and ask them to focus there for a second or so and
+then you know that okay uh you know uh this person was looking at that location
+and so you have the ground truth and you also have the picture of their eye taken at the same time right so uh this is
+called active when you are saying that oh look at the screen um this this kind of uh uh data generation is called
+active the other kind is called passive right where you ask the person to wear
+some glasses uh but just do their work normally right they are not actually U
+following any instructions they say that just wear these glasses and use the computer as you would uh in normal
+day-to-day work and there there are certain activities that require you to
+look very closely reading is not one of them if you're reading something you're not actually focusing on individual
+words even sometimes because it is pattern recognition you go very fast and you're not reading
+uh if you uh if you are uh typing Etc are also not there but let's say you are
+clicking on a button then your attention goes to that button you make a click double clicking is another example where
+people pay very specific attention The Gaze is focused while double clicking
+right so knowing when people double clicked when uh they clicked on a button Etc uh and if you know in a normal
+course you you can imagine that these things are happening all over the screen so you can gather that data passively
+without requiring people to pay specific attention right
+so now let's go over to some algorithmic thing one of the Prime things right we
+will go into how exactly gaze estimation is done but one of the core algorithms in gaze estimation is a pupil detection
+okay so pupil detection is uh there are two different configurations of uh
+of camera and lights that people normally use for pupil detection one is called the dark pupil right in dark
+pupil you have the camera and you have the light source and you take a picture that looks about like this right and
+then the pupil is dark here uh and you can easily uh you know detect the pupil
+because you can see how uh high contrast the image is the other approach is to use the to collocate the light and the
+camera and when that happens you can uh I mean people who are old enough where
+we had uh you know cameras that produce these red eyes um uh may may remember
+right it was a very common problem whenever you took did flash flash photography the person was looking straight into the camera they would see
+these red eyes ghostlike red eyes and yes there was even it was even a big
+feature for cameras at one point to have red eye reduction if you can believe that yes in fact I have blog post about
+Redi reduction you been doing this a long time right so um yeah and and uh so
+the same concept is used here for bride pupil so when the camera and the light source they are collocated uh then it
+produces a bright pupil and uh you know uh you can use slightly different algorithms for locating this bright
+pupil as well um now uh the camera configuration right uh you cannot I mean I just made
+up this configuration but you cannot actually use a camera right there because uh usually the person wants to
+see something other than the camera right the goal is not to track the eyes the goal is for the person to look at
+something and the camera should not get in the way in this configuration obviously the camera is getting in the
+way so obviously you cannot put um the cameras right in front and when you put
+the camera on the side the quality of the image just degrades right substantially you can see that first of
+all uh it is no longer a circle uh the pupil and the uh the eyeball itself they
+are no longer circles and so that adds some amount of complexity but um so it's
+you know that's that's one configuration but you can make the configuration better by using a beam
+splitter right um and this uh I mean there are systems that work on this kind
+of images as well but uh you could alternate L use a beam splitter where it
+is a half silvered mirror the eye is looking through this half silvered
+mirror and you are actually getting a reflection of the eye in the camera but you can also see outside right uh the
+it's almost like you're working in a slightly darker room 50% darker room
+than um than normally you would you can still see fine the pupil will dilate better right and uh this is a setup uh
+you can use to get higher quity images now I tried to figure out you know what
+does Apple Vision Pro use what kind of configuration it uses and I stupidly very stupidly went and checked out their
+uh their patent so one of the configurations in the patent is uh this
+uh this one where you can see that the camera is looking at an angle and these
+things these little things uh 130 those are LED lights and then they have this
+uh they have this lens or miror kind of thing and then you have the screen that it is looking at okay so I said okay
+that's a simple configuration but then it also mentions this configuration
+where uh this this thing that you're looking at is actually a hot mirror
+right it reflects light so you have this configuration in which the you're using
+a beam splitter kind of uh kind of thing right but um and then then finally you
+have uh a physical beam splitter as well which is placed behind the lens uh which
+made me realize that you know patterns are the worst things to understand how things actually work because here they
+are trying to cover all the various things uh that somebody could utilize instead of telling us how they actually
+did it right uh but it's good to know that it is you know uh one of these three configurations they might have
+used uh it's very difficult for me to confirm which one uh it is uh but you
+know over time people will take these things apart and we will know more about what what what exact configuration is
+used these these patent drawings are very they remind me of Salvador Dolly
+like I'm thinking of V andalo like yeah or or possibly A Clockwork
+Orange right okay so the pupil detection you
+know even though I showed very nice images Etc uh and I said that oh you can use uh Circle detection Etc but in
+reality this is very very challenging right if you look at these real images you have problems with Viewpoint when
+the camera is not looking straight you have people could be wearing glasses you could have partially closed um you know
+eyes uh there is a you know naturalized also have you might be a little bit
+stoned oh that's true that's true
+yes and not that I'd know anything about that obviously of course not of course not how would you possibly I'm a good
+boy yeah so no comments on
+that um so yeah so these are the various challenges right and uh this YouTube link uh has more details on uh
+challenges some real videos Etc where you see how challenging even a simple task as Circle detection right uh in the
+real world simple things that look very simple in uh you know when you're solving a toy problem they when they
+have to be solved with a very high level of accuracy under different conditions they become very very challenging right
+so the algorithms until recently uh when I say recently until like say five years
+uh back most of the algorithms used very traditional computer vision techniques they used Edge detection ellipse fitting
+low-level Vision the same kind of kinds of techniques that you would use in a class project they were actually used in
+the final product product uh also um and you know the accuracy was not great but
+starting you know let's say the five years more than 5 years back uh CNN's a
+deep neural networks they took over and now most of the systems uh are based on
+neural networks and we'll uh learn a little bit about them as well so before we dive into this thing
+right let me explain a little bit about the I model right so this is you know I
+I just uh created a schematic diagram of the eye obviously uh things are not so
+circular and uh spherical and pure but the screen on which uh the eye projects
+uh the image that it looks at is called the retina be in front of the retina we
+have this uh lens which basically tries to focus everything onto the retina and
+then we have these uh almost muscles you can say called Iris which controls how
+much light opens uh how much light gets into the eye and that opening is called
+the pupil right on top of the pupil we have u a a layer called cornea this is a
+transparent layer and uh this basically uh you know protects the eye so uh you
+may think right uh that this is the direction of gaze here
+what I have done is I have uh connected the center of the p people right here to
+the center of the lens and drawn a line right you would think that this Optical axis is actually the Gaze Direction it
+turns out that there is another part of the eye called the fuia it is off center
+it is not exactly where uh it is located right uh along the optical axis and
+fobia is where you get the sharpest image right the lens construction inside the eye such that it is not along this
+uh axis along the optical axis but uh slightly off and you know
+this this is actually the Gaze Direction the you know the uh the Gaze detction is
+given by this line that connects the center of uh this fobia to the center of
+the pupil right so that is the visual axis that is the Gaze and we have the optical axis which is slightly different
+and this angle is called uh Kaa or sometimes there's another word for it um
+I can't remember maybe it's called alpha or something like that but this angle uh is very specific to humans uh individual
+so this is not same my Kappa angle would be very different from yours so this needs to be estimated and it cannot be
+estimated using uh using and uh using images directly right that's interesting
+is is that unique enough to be used for identification would you say I don't
+think so because there is an overlap right they all lie between let's say
+they are approximately 5 degrees right there's a there's a spectrum you're saying on the yeah yeah but it's not
+unique right so two people can have uh the same angle it's not unique right but they are
+not the same right uh it may differ it's approximately 5
+degrees so um so for good high quality ey tracking you need a user specific
+calibration and that is why when you actually uh use the open uh uh use the
+Apple Vision Pro for the first time you will have to go through this calibration step where they ask you to look at uh
+you know there are circles uh in uh in a circle the circles arranged in a circle
+and they say that gaze here look at that look at that look at that and so on and so forth right so that you're able to uh
+they they know this angle they are trying to find what this angle is uh
+however that said it turns out that there I tracking is pretty good even uh
+so I calibrated the system for my eyes but I have used my friends have used it
+and they were able to do uh it tracking based you know uh user interface they were able to use it just fine but uh
+obviously it is much better for my eyes when you know when I do it maybe the accuracy is much better but you need it
+is it is a fact that you need to do uh user based camera calibration there is no getting around that there is no
+image-based method that is possible to solve this problem okay and to do this what we what
+people do is you know they ask uh they first put some dots on the on the screen
+and in a calibrated setup they also figure out where the person is gazing
+using the algorithms that they develop they figure out you know what is the Gaze Direction and where actually where
+they had actually pointed and where they actually looked and this uh distance
+they it gives you um you know an estimate of uh of
+Kappa uh there is something more also you know when uh so I just mentioned
+that people use uh pupil right what other features pupil is not enough to tell you uh even if you locate the pupil
+very accurately it is not enough to tell you where the person is uh looking because you know pup if you think about
+it it is basically one degree of Freedom right there is a circle and the center of the circle
+but um you need more information because the person is looking uh you know in 3D
+so the other information people use is the light reflected off of the cornea
+right so you can imagine this is the cornea it is a transparent uh uh film on
+top of uh the pupil and if you shine a light on it some of it would reflect
+back and enter the camera and you we have already seen right uh you have the
+pupil here and this is the reflection of the light on the pupil so you have
+two points right if you can locate them uh you get more information about where the Gaz is tracked right so this is
+light detection and you also have pupil
+detection and based on that you can this this uh these two things you find this
+line which connect the center of the pupil to this U corneal reflection and
+there is a whole there are a whole bunch of algorithms that use this information to uh estimate where the person is uh
+gazing right and if you want to learn more about this thing just search for pupil Center uh Coral reflection
+pccr and you will see how this thing is used right so but the thing is that there is
+no reason for just using these two features right you can actually use many features on the eye to estimate where
+the eye is looking together so some of these features may not be useful and if the machine learning algorithm is doing
+its job those features would just drop out but um using more information is
+always a good idea right uh because if you're using the right machine learning algorithm some of the information uh
+will be automatically removed uh they will not be used if it is not useful so
+you can see here uh you know you can track all these points on uh on the boundary of the eyes you can track the
+coordinat reflection location the iris location and uh the you know the pupil
+uh location to estimate where uh the person is looking so now the Gaze estimation
+becomes you know you have this image on these images on on the eye image you
+detect all these features from those features you estimate the Gaze right so
+that's uh that's how the Gaze mapping works now you may be thinking okay um
+and the same thing applies to uh this other setup as
+well so how is this uh you know feature-based methods how do they work
+there are two ways of doing this one is to have a geometric representation of
+the eye right and sometimes uh this geometric representation includes head
+and the eyeball and there are other methods that also use rgbd cameras and
+the the main important thing is that they have a 3D model of the I uh in between as an in between right from
+these features they estimate the parameters of this 3D model and from
+that 3D model they are able to estimate where the person is gazing because it's a 3D just imagine that they have a 3D
+eye looking right and they can just connect the FIA to um to the center of
+the lens uh once the parameters have been accurately estimated and you find
+you know the location uh this requires sophisticated modeling right of uh of uh
+the eye and you know you can imagine modeling the eyeball and the Coria as spheres the pupil and Iris as concentric
+circles but you can have very sophisticated models there is no end to it uh to physically make it as close to
+the human eye as possible and you need to know enough biology and uh you know how the human eye works to make these
+models but uh plenty of companies have uh used this approach uh espe especially
+when uh the the requirement is very stringent right when you want very high level of high level accuracy then they
+go for this intermediate 3D model representation and then uh estimate the
+Gaze but the newer methods which are much faster uh they go from features to
+uh the Gaze directly right this is basically 2D regression you can imagine that all these feature points you can
+string them as a vector so this is a vector VOR that represents the I from this Vector how do you find uh the XY
+location and it becomes uh a regression problem and you may think that oh how how does it work without the
+intermediate 3D representation uh think about it as an implicit way right when when computer
+vision started right um and you had a robotic manipulation problem so everybody thought that let's say you
+want to lift a pen the robot hand has to lift a pen from uh from a table
+uh at that time the thinking was that you need a 3D model of the hand you need the 3D model of uh the pen and then and
+only then will you be able to lift it properly right and this was proven to be false this was proven to be false
+because now machine learning algorithms if you have enough images showing how the person goes and lifts
+the the pen you will be able to train a robot to go and lift the pen right there
+is no intermediate 3D representation it is directly from the images so the robot looks at the image just like human
+humans look at the uh you look at the pen uh you can lift a pen even with a single eye right you don't need depth
+estimation so uh because you know you have prior knowledge of what this thing
+uh looks like and you you'll be able to grab a pen the same thing applies here
+you don't need a 3D representation uh always right you can train if you have enough data earlier we did not have
+enough data and that is why it was super important to have a 3D model uh which
+had this parametric model that you could train but now if you have enough data
+who cares about the intermediate representation just go directly solve a regression problem because you have
+enough data uh another uh thing when you look at the literature for uh I estimation uh
+gaze estimation you will find something called cross ratio based methods this is
+is this is I I really like this method because it's so simple and it solves the problem in a very elegant way a very
+easy way right when the situation is right and this happens when you're looking at um at a screen right if
+you're looking at the screen you can put four lights on the end uh on the four
+corners of the screen right now these four corners right these four lights
+would reflect in the eye as you can see in this picture okay and you can detect
+because these are lights you can easily detect the location and then you take uh another uh camera which is collocated
+with the with the light and you get this uh bright uh pupil uh and you can easily
+detect the pupil right now see how you know easily they have used the geometry
+here uh is what the geometry looks like you have detected the pupil and you have detected the Four Points these four
+points correspond to these four points and assuming that the cornea is approximately planer or you could even
+model the cornea but for for Simplicity just assume if the uh you know uh this
+thing is you know uh planer in that case you could find what is the center of
+this point and just map it it is basically uh you know uh a mapping from
+uh one plane to another plane right it's a homography so any point you find the
+homography using the these four points and then you can map any point uh which is the center of this thing and uh map
+uh to the to the screen right and you have to do you know user specific calibration to find out what is the
+Kappa angle and you're done so very simple setup um to to get very high uh
+accuracy output U and it's it's uh very simple so it's it's used uh when the
+situation allows it right when you're when you have a setup where you can put these lights on the side of uh the
+screen then then you can use this method another uh method is uh based on
+appearance so there is this uh class of uh you know there's something called 3D
+morphable models 3D morphable models are models of let's say the human head where
+you can morph uh you can change uh they are called morphable models because there are parameters just imagine there
+are knobs that you can change and based on the setting of the knob the head size may change the nose shape may change
+different things can change based on you know uh based on what is the knob setting
+right and these models have been uh created by using many many 3D scans of
+human heads and eyes Etc right so you get this 3D uh model now the goal here
+is that uh using this 3D model you have a picture of the eye and you try to
+morph the model the 3D morphable model so that your model looks as close to
+your picture as possible and once you have done that because it's a 3D morphable model you know all the
+information it's a synthetic uh thing right you know all the information in this 3D model about gaze Direction
+everything so now because you have mapped uh you have changed the parameters based on the appearance uh of
+of the image you can you can find the Gaze directly right because in the 3D
+morphal model you have gaze information embedded inside it uh so that's but as
+you can imagine that this is this is a much more expensive operation to First generate uh you know
+the appearance to be as close to the image you're looking at and then find it uh it's typically anything that involves
+3 3D morphable models they uh expensive they're
+computationally expensive yeah um in fact you know facial feature uh
+detection we used to do it uh back in 2006 uh when I started our um company
+where we did uh you know uh um uh be face beautification and applying makeup
+on face we had to automatically determine the location of lips eyes
+mouth Etc and there we used a 3D morphable model in the back end and it
+used to take um I cannot remember uh 8
+to 10 seconds and we were thrilled that how fast it was right again how how
+times change right and now those things can be done in real time with much
+higher accuracy not even real time facial Landmark detection uh Works a th frames a second right uh so it can be
+that fast so a comparison uh of G tracking
+estimation techniques I'm not going to go into uh all the details but in general uh this was true a few years
+back this might be changing now 3D model based techniques used to have uh higher
+accuracy you can see that the Gaze estimation accuracy is less than 1% and
+uh you know all these other methods regression based methods Etc uh had one
+to two degrees accuracy but I'm pretty certain that this thing is changing now um and because just because we have a
+lot more data to solve these problems so uh let me just take a little
+break to uh to understand uh are people getting this what I'm teaching is that
+uh I mean the goal is not to go into you know deep technical detail about each
+algorithm but get a rough overview of various techniques out there yes give me
+a yes in the chat all right all right people are people are following and we we've had some good uh comments about uh
+like Abra in the chat's been talking a bit about how Cadillac and BMW use similar methods as these to detect
+driver alertness and and maybe you know wake people up if they've been behind the wheel a little bit too long stuff
+like that that's great and we have 172 on Zoom alone yep' we've been over yeah
+over 300 concurrent viewers this whole show so far all right all right good uh
+yeah motivates me a lot so let's uh look at the recent Trends u in gaze
+estimation the biggest trend is synthetic data people realize that uh you know if you don't have synthetic
+data you have to create these intermediate models Etc but now the techniques have grown to a level that
+you can create synthetic data so in 2015 a data set called synthes eyes was uh uh
+was published it created you know they used high quality 3D scans The annotation became automatic and the they
+did this photo you know very photo realistic rendering of the eyes so these were 3D models and from that you could
+render the eyes and you can imagine that you can change the material properties of the eyes it could be a blue eye it
+could be a red eye uh not red eye BR eyes or other kinds of colors uh hazel
+eyes black eyes um without actually changing anything right you have the geometry you have yeah go Ahad you were
+joking there but uh somebody just asked how would contact lenses affect this for
+example you can get those color change contacts or like monster eyes like how how would that would that totally trash
+this sort of thing or no no no no uh it works just fine uh contact lenses
+because they are transparent right and through that you can still see what uh what the location of uh the pupil is so
+it doesn't uh it doesn't affect so they may have red
+eyes right that's true around
+Halloween so so synthes eyes um they
+created I mean at that time in 2015 this was a very large data set of 11, 382
+synthetic RGB images and uh they also had change in uh head pose a 40 40
+degree variation in head pose and 90 Dee variation in gaze and you can look at
+these images you know some of them look kind of uh uh kind of fake but most of
+them look uh pretty realistic right and especially if you you can see the eye
+shapes Etc you get a very very high uh you know Variety in uh the different
+shapes of eyes Etc because these were based on real scans right and also this
+looks extremely Salvador Dolly like I I can't this you could have pulled this right out of an art history book on
+surrealism right uh then we had Unity eyes uh and they
+basically gen in 2016 they published 1 million synthetic RGB images and the
+Tool uh they also have I think the tool to create the synthetic data is also public uh but you'll have to check it
+out and these are the kinds of results uh you got it's not I wouldn't say that it is photo realistic but it's a start
+for sure right um so and I'll so you can see that the gaze is extremely real
+because it's all synthetic data right you know where this um where the eye U
+eyeball is located and how it is moving and then we have NV gaze this is
+NVIDIA in 2019 this is uh they have both synthetic
+and real images two million synthetic near IR images and the labels are gaze
+Direction eye location pupil location and region labels right different regions of the eye uh they have labeled
+also and here you can see the dilation of the pupil all this is synthetic right
+so the white of the eyes they are you know darker the lighting is changed they also have U you can
+see specularity there the specularity the four um that I was talking about
+they have those kinds of things um and you know 2 million that's that's a very
+big data set so in addition to that uh they also have 35 subjects and 2.5 million images from
+these subjects with uh you know various illumination changes Etc so very very
+nice data sets uh in 2016 there was another technique called siman that was
+I found very interesting what they did was they took you know these synthetic data it was being generated people were
+getting a lot of synthetic data but we all also knew that this synthetic data is not uh it's not 100% uh realistic
+right it didn't look as good um we knew you could look at this data and know that this is synthetically generated uh
+at that time at least that was the uh stateof the art so they came up with this very interesting technique that
+okay we have unlabeled the important thing is that unlabelled you did not say that this is um you didn't have to mark
+anything right so you took un unlabeled uh real images and used uh a gan right
+for people who don't know Gan um it is a tech for creating new samples of
+anything right let's say human faces you trained again uh using human faces now
+you could generate a new human face which is not which follows the distribution but it is not one of those
+millions of images you use to train it and I think if you go to this person does not exist it will give you a sample
+from from this distribution every time you refresh the page right so similar
+technique uh using Gans was was used to take the synthetic data and make it look
+very realistic using unlabeled um real images right and um
+so this is very interesting because using you're using first of all synthetic data um which was you you know
+you find in abundance you're also using real data and if you don't have to actually annotate the real data that too
+can be pretty abundant right it is not as abundant as synthetic data but if you don't have to La it then it's it's quite
+good right the effort required is much less uh now let me go over a few real
+data sets uh UT multiview 2013 this is a collection of real data sets there are
+50 subjects um and eight camera views 160 gaze directions here the head is
+held steady right they basically put the head in a chin rest so the head doesn't
+move at all and it's only the you know motion of the eyes Etc so kind of uh
+contrived setup but at that time you know just getting that right was uh pretty good the other uh the other
+assumption is that the you know in a head mounted display this the reference frame is connected to your head and
+there is not much motion between the head and the head mounted display uh
+still very nice data set right and you know just as a reminder to people 2013
+was over 10 years ago that's true you that's that's true
+that's true I'm going to crumble into dust and blow away now somehow whenever this uh you know
+the discussion about time and age comes along I remember my son uh once told me
+he's uh now 7 years old he told me when he was 5 years old that his teacher is
+very very old and I said how old is she he said 40 years old and I just you know
+it broke my heart hey the kid wasn't lying I feel [Laughter]
+it all right so uh there's another data set called um IAP uh 2014 and here they
+had two cameras RGB camera and rgbd Camera 6 62,500 images 94 sessions 16 uh
+people total 12 males um four females but the interesting thing about this
+data set was that they had a 3D Target you can see that orange ball in some of
+these so they were not just doing a plane uh you know trying to detect where on the plane the person is looking at
+but in 3D where this uh where this person is gazing right and that is why
+they had this connect uh system right they had this rgbd camera to locate the
+ball and uh you know it's it's it's more than just plain gaze right
+we have the MPI gaze 2015 uh very large data set very popular
+uh data set two 23, you know 659 RGB images 15 people
+and they were using this on everyday laptop right uh use U so that it is not
+uh it is not a contrived setup if you have a lap laptop based system right if you want to find uh where the person is
+looking on at any laptop you can use uh this data set for training your system
+and you know uh the laptop and the screen will calibrated uh the user was
+shown a pattern every 10 minutes so they would do the regular work and then every 10 minutes they would be asked to um see
+a pattern and so it it does mean that when the when the data was collected at
+the time they were not doing the normal work right because they are looking at a
+particular pattern but it does guarantee that you're getting uh people in many different environments many different
+working conditions uh Etc so that's a very useful data set uh interesting one uh in 2016 was
+gaze capture and they just you know uh used uh Amazon Mechanical Turk and uh
+they they basically created a very large data set 2.5 million RGB images of 1474
+people if you look at other data set they are talking about you know 35 people 50 people that kind of uh these
+guys they really uh used U Amazon Mechanical Turk and an iPad to create a
+very very large uh data set it's h it's an interesting paper you should go and read it because they talk about many
+different techniques to make sure that people are not cheating right because uh these people frankly are not
+uh I mean they are motivated by making uh making making money right so it is
+very easy for people at this scale to have uh at least a fraction of these
+people who are cheating right and to make sure that they don't cheat they had
+many different you know user interface was very good for example when they asked you to look at something they just
+didn't show a little dot they would see show something that is pulsating and
+after you said that okay you have gazed at that there was also a little um
+letter L or R right next to that Target and you had to press uh left or right
+right based on what letter you noticed there and if you did not notice uh do it
+correctly you'll have to do it again right so that way they were ensuring that people were not cheating on this uh
+on this large uh uh project and unless they were just a very very lucky guesser
+yeah you know 100% of the right 100% of the time if they are right
+so uh RT Gene is another data set this is uh interesting because uh even though
+the number of subjects is small this is uh you know uh the training images is
+also small uh but they go for extreme head pose and uh they have this very
+interesting gear I think I included it just because I found the gear very interesting um so you remember that in
+uh the previous data set uh sometimes the head pose they wanted to keep uh it constant uh if they don't keep it
+constant then it's very difficult to know what the head pose was but in RT Gene data set they wanted to get the
+head pose also without actually constraining uh the head and what they
+did was they asked people to wear these glasses and you know the glasses were taking uh the pictures of the eye but
+they also these glasses also had this map system you can see these three coordinates
+you may be able to see these three balls they are basically three coordinates uh you know of of the system which was
+attached to these glasses and then there was a moap system a motion capture system that people use in the movie
+industry to uh to find these dots right and once these things are located from
+multiple cameras um they they are you know these you can find the 3D
+orientation of uh the glasses with respect to uh the map system right that
+way you have head orientation with because you know you can assume that the head is rigidly connected to the glasses
+and you have uh IE um you know eye tracking Etc so interesting I I found
+this very interesting um data set collection procedure so this is what it uh looked
+like you know complicated system but a very interesting system uh you have
+motion captured you have RGB D camera you have uh ey tracking Etc and one other thing that they did
+was uh at that time the results don't didn't look very good but I think now if you did the same thing the results would
+look very good they didn't want uh these people wearing glass you know glasses to
+be in the data set because sometimes you may want uh this uh without the glasses
+and they used a gan based in painting method for removing the glasses the results here as you can see on the
+screen they look okay but with current methods if you did this in painting it
+would be spectacular right you would not be able to see those uh little glitches
+that you can see for example in this image you can almost see it doesn't look very good so sort of looks like a Star
+Trek uh character with the the ridged eyebrows like right so yeah so this is
+another uh capture method uh open EDS is a very interesting this is again a
+virtual reality uh this is for head mounted displays 152 participants and
+they have semantic segmentation for every uh image so here for example the
+various parts of the eyes they have been located using semantic segmentation not just curves which you know it shows uh
+better accuracy because you know when you're using curves Etc even though you say that this uh is an ellipse it may
+not be exactly an ellipse if you do semantic segmentation you can exactly
+carve out the Contours and show how it is right so and in addition to that they
+also have a very large data set of unlabeled data set and that is also very
+good you know because uh they could do whatever budget they had for um annotation but the rest of the data
+collecting data is easy annotating it is much harder so but unlabeled data can
+also play a role in improving accuracy as we saw in one of the examples right
+so it's good that uh they gave this out and um in addition to that they also
+have this uh Point cloud of I topology for 142 subjects so they had this point
+cloud of ey topology that uh they they got for each subject which I felt that
+you know it could be very uh useful um in in solving the
+problem so algorithmic Trends uh how much how are we doing with time we're
+about seven over right now okay should we do the um yeah let's do our let's do
+our giveaway give uh yeah people have to bounce off then we can continue with this very informative and interesting
+presentation all right should I yeah go ahead and unshare and we'll yep okay how do you out there
+folks thanks for sticking with us uh it's really exciting to see the the sheer number of you with us today we've
+been over 300 concurrent viewers for the whole episode we really do appreciate that and so we're going to give
+something back to you in the audience the very first person to answer the trivia question I'm about to ask will
+win the open CV course of their choosing only people in Zoom can answer
+this please just use the chat system to to type your answer and please wait until I finished asking the question if
+you have won in the last couple of months please do not answer and give someone else a chance to get the free
+course you can see what courses are available by going to open cv.com or/ University and even if you don't win
+invest in yourself invest in your education maybe upskill or get a new job
