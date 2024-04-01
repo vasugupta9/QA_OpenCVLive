@@ -9,7 +9,7 @@ def find_answer(input_context, question, openai_api_key):
     client = OpenAI(api_key=openai_api_key)
 
     # Define conversion prompt
-    prompt = f"Answer the following question based on provided context.\n\nQuestion - ```{question}```\n\nContext - ```{input_context}```"
+    prompt = f"Answer the following question delimited by triple backticks based on provided context also delimited by triple backticks.\n\nQuestion - ```{question}```\n\nContext - ```{input_context}```"
     print("Prompt:")
     print(prompt)
     print("="*100)

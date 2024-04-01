@@ -1,0 +1,679 @@
+joiners I see I see Albert Baldwin like every single morning hey folks welcome
+howy everybody yeah welcome for making time yeah please everybody uh let us know where you are watching from
+wherever you're watching us YouTube twitch Twitter Facebook Zoom etc etc I am coming to you from beautiful fragrant
+Soma in downtown San Francisco California and our guest this week is quab and auman quab where you coming
+from I'm coming from beautiful fragrant Soma also that's right I I could probably throw a rock if I really you
+know cut got the wind a little bit and it might hit you but yeah Bill lives a block away from me that's right hello
+Brazil hello Madison Wisconsin hello London hello
+Liberia I think we've had a Liberia pop up in the chat yet I'm uh I'm excited
+for that welcome folks hello Vancouver good morning as always Steve
+from Smart Mansion Inc in Toronto hello Rustin Louisiana
+hello Florida Canada India Palm Beach Florida Oman
+Greece Munich Holland Smithfield
+Virginia Samuel coming to us from Toronto on YouTube here we are around
+the world we just need someone from Australia indeed Richardson Texas medin
+Colombia Oman hello everybody we really do
+appreciate you joining us here on this beautiful Thursday morning here on Al
+Gore's internet got quite a few folks from Germany this morning hello
+Germany this is going to be a fun one we've had uh quaba on the show a couple of times here but um you know we're GNA
+we're going to talk about a little bit what's what's new and a little bit about the sort of history of open MV and um
+maybe give you some some tips and tricks on on your own entrepreneurial
+Enterprises and things like that for you folks out in the audience um as always uh don't forget
+that we're taking questions we will get the show started in in just a moment we'll give folks a little bit more time
+to see that we're live and and pop onto the YouTubes and the and the LinkedIn
+and whatnot we're currently setting at 65 here on the zoom chat doing a quick
+survey over on LinkedIn what do we got 25 over on LinkedIn we got eight on
+YouTube couple people watching on Twitter we're never calling it X on this show got a couple people watching us on
+the face works that that's my Hill I'm I'm I'm
+taking that one to the Grave yeah I just it's it's the naming is is a one letter
+I know I know someone likes that but it just it's too it's embarrassing it's embarrassing
+the guy's like 60 years old come on man like why didn't he just call it extreme or something Fu okay um got AI
+assistants joining now yeah there's there's a flood of them uh please folks like if I I know that you like the AI
+assistance but we only need one per meeting like I'm I'm going to have to start kicking people out of here for
+doing this because it's taking it's taking uh too much too much Focus away from everybody else um
+but uh yeah so I think let me now is a a good time for us to get started
+so hey out there everybody Welcome to open CV live I am your co-host with the comos the second banana who is second to
+none I'm also your plus one and only it's Mr Nelson if you're nasty but you my dear friends can call me Phil and we
+are here this week with quaba aguman the founder of open MV who makes amazing low
+cost low power cameras that that have python inside for
+microcontrollers they've been around for several years we've had them on the show a few times and we're looking forward to a catchup um fun fact quavana lives one
+block away from me um so we we could have done this interview in person but due to extreme laziness on my part we
+are not speaking of extreme laziness Dr Satya Malik is not joining us today I'm
+kidding he is on assignment he's traveling we will have the good doctor back next week hopefully um but uh who
+knows uh the the busy life of a CEO something I'm sure that uh Our Guest is well familiar with if this is your first
+time joining us or you just need a few reminders one thing we do on this show every single week is take questions from
+you in the audience use the zoom Q&A button or the chat system wherever
+you're watching to ask questions during the show we'll do our best to flow them into the conversation we'll also save
+some time at the end of the show to try to answer questions that we have not gotten to we're also giving something
+away to you and the audience on this episode of open CV live like every episode later on in the show I will be
+doing a trivia giveaway one question the first person to answer it correctly will win the open CV course of their choosing
+you can see what courses are available by going to open cv. orgun University
+even if you don't win today check out opencv University maybe invest in yourself this year up skill get the new
+job you want get paid more at your current job uh open CV University can help you do all of these things if you
+put the work in um before we get started proper with presentation I've got a
+couple more little bits of open CV business I want to discuss up at the top here we're coming up on some deadlines that folks need to be aware of uh one of
+which is Google summer of code um open CV has been uh honored to
+be selected to appre to participate in Google summer of code for uh the the
+last many years and we really do appreciate Google giving us that support many awesome things have been added to
+the open CV Library as a result including huge updates and uh improvements to the DNN module in
+previous years um I believe uh some some barcode scanning optimizations were added last year
+um uh regardless uh Google summmer code contributor applications are open until
+April 2nd um if you are a student anywhere in the world you can go to summer of code. withgoogle
+and you can apply to work on some cool open CV projects over the summer also uh
+this year with Google summer of code the computer vision annotation tool has uh been selected and so maybe if uh open CV
+is not your bag you want to work on improving cvat another great open source tool that many people benefit from out
+there possibly including you watching this right now so go check out Google summer code um apply if you're if you're
+passionate about this stuff um looks great on a resume and you will get some uh highquality mentorship from industry
+professionals which uh for folks that have been in the industry know that it's tough to get a lot of these people's
+time and so being able to to actually you know interact with them and and and learn from some of the the top names in
+the the field of computer vision and AI is uh an opportunity that does not come very often so please uh check it out um
+we've also got the open CV workboard open CV 5.0 is is in progress we are uh
+every day the team is working on uh features for the biggest release of the biggest computer vision library in the
+world you can see the todos what's being worked on what's done we're also doing um blog posts on open cv. Org
+summarizing the changes every week uh this week's update will come after the show in fact um lots of uh lot things
+are starting to sort of uh snowball here and and really get rolling after a few weeks of you know doing a lot of the
+background work that is required before you really start crushing code and the team has uh yeah really started going
+here we've got 20 closed tickets uh obviously the best way to follow this is to go to the GitHub workboard it's
+github.com orgs opencv uh you know stay stay AB breast of the of the updates and
+and how things are going whenever you want by checking that out um open CV is a nonprofit organization that makes an
+open-source computer vision Library if you've got a few bucks to spare you can support opencv directly financially by
+going to open cv. orgs support and donating via stripe or PayPal open CV is
+a 501c3 registered nonprofit organization in the United States which
+means that if you are in the US and you donate it's very likely that you can claim this on your taxes so uh if you
+send us a donation hit me up fill atop cv. org and uh I can probably send you a
+tax receipt um it won't help you on this year's taxes obviously but because I'm sure many of you are in the painful
+process of doing this year's taxes or this quarter's taxes if you're a freelancer like myself uh you want to
+make sure that you you do your best to make next year's pain just a little bit less and you can do that maybe by giving
+open CV a couple of bucks if you're part of an organization that benefits greatly from open CV and you want to contribute
+to open CV to keep us to keep the lights on in this little nonprofit organization we have here we've got three levels of
+sponsor ship for organizations there's bronze at $6,000 a year silver at $30,000 a year and gold at $100,000 a
+year this gets you uh quite a few perks for example appearances on opencv live
+blog posts on open cv. org we will uh help Syndicate your content to the engaged open CV audience pending
+editorial approval of course it's me I'm editorial approval um so check that out
+if your organization uses open CV and wants to wants to give back a little bit to the community even if you can't give
+back financially maybe your organization has significant engineering resources and you want to devote some of those
+resources to help work on opencv that would be rad as well um please send an email to Phil itop cv. org if that
+describes your organization and we can talk and and see what we can do together thanks so much for considering becoming
+an open CV sponsor you can also sponsor opencv on GitHub you can go to github.com sponsoropen CV and for $9 a
+month month you can join the 12 incredible human beings who are currently supporting open CV on GitHub
+that's a new record by the way 12 excellent I love it um thanks so much everybody out there for doing that uh
+you can also buy a t-shirt open CV's got swag now we've got merchandise folks uh t-shirts buttons pins uh tote bags pet
+bandanas I'm deeply deeply disappointed in every one of you because I have not received a single photo of a pet in a
+pet bandan yet get on it get on it um you can also become an open CV volunteer
+open CV is building out our volunteer program if you're a student or a professional or just some person that is
+uh you know a freelancer building their own cool little uh open CV based projects um maybe you've got a couple
+hours to spare every week maybe you want to help uh promote open CV maybe you want to help us with documentation maybe
+you want to uh help organize an open CV Meetup at your school these are all great reasons to become an open CV
+volunteer please uh check out the open cv. orgs support page for a link on how
+to become an opencv volunteer um if you're watching this
+anywhere else opencv has a YouTube channel youtube.com/ opencv official
+this is where you'll find the recordings for every episode of open CV live we're also on LinkedIn we're
+streaming on LinkedIn as we are on YouTube we've also got blue sky we got we got the new stuff out here folks
+we're not stagnating on on the the failing Twitter platform we're on Blue Sky we're on Mastadon we're on LinkedIn
+we're everywhere um with that I think now is a great time to pitch to quavana
+quavana welcome to the show please uh you know tell the folks who you are and give us a little bit of history of open
+MV it's it's really impressive what you've been able to do with a like a very very resource constrained I feel
+like you you you're you're kind of amazing H thank you yeah resource constraint just just me and my
+co-founder really working on this uh platform now for quite a long time but with uh some success and you know
+improving momentum so I'll get started hi everybody uh I'm quaba uh I run a
+company called open MV and we've been doing a computer vision on microcontrollers for about eight plus
+years now um actually longer though because uh before I got into open MV I
+was doing something called the CMU cam I built the CMU cam 4 uh back in the day
+if you ever remember the CMU cam sensors these were the first like microcontroller computer vision sensors
+and they were they were released back in uh 20 uh 2000 more or less um way way
+before like you know Arduino or Raspberry Pi like had you know existed
+in some cases but definitely before there were camera modules at at that you know uh that size and and for MCU oh
+yeah absolutely these things were running on I think a XX 48 or something it was uh seriously an 8-bit
+microcontroller architecture uh I remember looking at the system and it's it's so simple compared to the mcus we
+now deal with um it's a it's a cool job running this company and and doing stuff
+on microcontrollers because uh these these little processors have gotten ridiculously powerful actually um uh
+lately uh they're actually kind of coming on the I I think about my um my
+first computer where I played Starcraft on and that now fits in a $4 chip basically uh that's kind of the level of
+silicon scale that's been happening uh you know Pentium 3 processor uh with all the SD ram and everything you had and
+hard drive now that's that that's a whole embedded system this big um so I've got a presentation uh to share so
+let me try to switch over to that um just to to get it started okay sounds
+great all right uh can you see my presentation is coming through I can see the screen we're coming through Demitri
+okay great uh which one do I that's a Doctor Strange Love reference for yall out there ah all right open MV uh so we
+make we make something called the open mvam and we are developing a computer vision Library like open CV but our
+focus is on embedded systems that have no operating system so bare metal um you
+know pretty much uh everything is just running total control um on the system
+and these are for microcontrollers that are small computers in everything so um our most recent product
+is the open mvam RT 1062 built on a cortex M7 processor and this is a 600
+mahz CPU with 32 megabytes of SD ram uh again fun fact Windows XP that's the
+minimum requirements you need to run Windows XP actually so could this run Windows XP potentially um would you want
+to try to make that happen though probably not but uh it definitely can run Doom um anyway so you might be
+underestimating just how much I love and miss Sid Meers Sim
+golf probably could put Sim City on it definitely it doesn't you know this is one of those things I'm going to hijack
+for just one moment uh I think a lot of people are familiar with wine the the the windows compatibility layer for for
+Linux and and and Mac OS there's some games that because of the way that they were developed at the time they do not
+work still on wine and you have to basically have a Windows XP or Windows
+2000 in stall to play them one of which is Sid Meers Sim golf one of my all-time
+favorite games so for a while I had a little you know uh desktop like Packard
+Bell computer just to play that game in my apartment that's a lot of work to maintain you know especially since
+computers sometimes randomly die when they get the heart the Heart Wants What It Wants man that's true um all right
+anyway uh to continue yeah so what we do is uh basically it's a full computer vision live Library similar to open CV
+uh mainly just like the image processing module um not not necessarily all the extra algorithms uh we try to fit
+everything actually within to about two to four megabytes of flash Bas so if you if you think about that yes you can you
+can do most of the algorithms on open uh open CV within two to four megabytes of flash uh because at the end of the day
+most of them just have really tight loops and aren't actually a lot of lines of code in particular um the the thing
+that the things that are huge are the data structures that you need to store like um you know ml models that that's
+where you start using up a lot of space real quick um and then you know one thing we've been doing uh which is
+definitely new for folks of the microcontroller world is actually trying to do simd optimized coding uh so a fun
+fact um a lot of these mcus that are out in the world they actually support uh
+something called cortex simd um uh instruction sets and this allows you to
+do two instruction s per clock sometimes up to four uh it's it's very limited
+compared to desktop simd but this is widely deployed on billions of mcus and
+this actually lets you get you know again you know two to 4X the performance on these microcontrollers uh but uh it's going to
+change in the future because arm just released uh this new processor called the cortex m55 uh they came out with it
+back in 2020 but uh it's finally made its way into chips now this year
+and uh basically microcontrollers are going to have Vector DSP instructions uh similar to arm neon so this is about a
+th000 new instructions to the instruction set and this actually improves the processing performance from
+you know two to four uh data values you can operate on a time to up to 16
+actually um and so just think about those as like clock multipliers so that 600 MHz CPU I'm I'm showing you is
+actually you know 1.2 gigahertz and then once you bring in the uh you know the uh the neon well the the
+new helium instruction set for new systems that 600 megahertz will you know
+be multiplied by eight then and so you're really getting into you know application processor territory in terms
+of performance but uh still on a MCU that's bare metal um where you control everything directly um now why are mcus
+interesting well one of really impressive how quickly um I feel like the last couple of years the the
+efficiency of these processors has really like kicked off I'm building a little Cy deck project in my spare time
+just based on the pi 02 and holy moly like it's wild how fast that thing is
+for like $10 um and you know I've got a heat sink on it so I'm not worried about thermal
+issues or whatever but I mean you can really text like that thing will run on a very small battery for hours and hours
+and hours you know pretty good pretty good speed like you can play some it definitely runs Doom oh yeah
+you could you could probably run you know seven or eight Dooms at a time on this little guy it's it's incredible but what if you could do it
+without a heat sink that's that's the promise of microcontrollers uh they uh you know
+you're drawing something on the order of 100 milliamp and the newer ones that are even faster surprisingly they draw less
+power thanks to just lower voltage rails and such um so you're looking at like 20
+30 milliers for you know the even more performance which is just a tiny tiny
+amount of electricity like I don't folks that you know they might can you can you
+think of a good way to describe that to people like the the comparison because if they're not electricians they you
+know or uh Engineers they might not get just how tiny that is yeah yeah um let
+me think let me think what's a good comparison um well okay so let's do wattage like
+your your standard laptop is 65 Watts power adapter and so this is one this no
+this is less than one this is like .3 Watts or so so that's the that's the best way to think about it your computer
+needs 65 this needs .3 so it's it's a it's a couple orders of magnitude and
+difference wow but uh that's actually really important next point I wanted to
+mention is the uh the power draw in deep Sleep is where we've been seeing a lot of people really interested in these
+products uh particularly it's it's this kind of superloop people want to do where they want to have something that's
+on a battery it's in a really low power state and then an event happens it wakes up into a higher power state it takes a
+picture it does some ML on that picture to figure out you know what's happening and then it would transmit that image to
+somewhere else and then it goes back into sleep and that's where we see a lot of people looking at this technology for
+that reason um and to help enable that to transmit the image somewhere we really built in a lot of connectivity so
+ethernet Wi-Fi Bluetooth USB uh spy bus I squ C so everything you need to really
+get to wherever the heck you're going with that data one of one of the great use cases for that what you're
+describing here that we've seen in in previous open CV competitions and and even in the news is is conservation like
+uh uh basically like spotting poachers and things like this in various parts of
+uh you know like Africa and and other places in the world where there's not a ton of people around not a ton of like connectivity or or ways to really do it
+and it's also kind of dangerous you know for for humans to be just kind of out there number one poachers don't like
+being caught uh number two those animals are big and you're kind of on their Turf
+um and so this this sort of thing is is really essential to a lot of um you know environmental concerns and improvements
+that we as technologists can bring to the world so it's really awesome to see oh yeah no definitely we actually have
+quite a few customers who are actually using the open MV cam in that way because it kind of is a direct fit for them um the the low power point being
+the most important uh it's it's a it's a challenge when you need need to so when I say we can go to microamps of power so
+when you when you go to the microamp level a a battery
+uh let's see at the microamp level a battery this
+big will last you five years of runtime it's nuts in low power mode so when
+people talk conservation cameras they'll load it up with maybe a you know 20 or 30X this much battery power and you know
+pretty much you'll have a system where you can deploy it and realistically 5 years later come back and it'll still be
+on that same battery that's wild like it's it's interesting because on some of those batteries that the that's actually
+beyond the expected lifespan of the battery like it'll never it will never complete a full discharge cycle in its
+life that's kind of interesting yeah though that's the that's the goal if you actually want to have something deployed and it it's it it's what's interesting
+about uh these types of applications is it one of the things to understand is when you have a large amount of power
+consumption you have to actually link yourself to typically to some power input source uh to get power um Poe for
+example might be a way to do that but um Al so I'm I'm the president of my of my
+HOA where I live and I didn't want to be the president it was just there weren't that many owners in my building so I got
+signed up by the all other HOA members and it it basically means I act as a super for free you know fixing light
+bulbs and other stuff and most recently you know the garbage uh can overflowed and someone had to go into to the
+garbage room and pick it up um so it's not a it's not all a fun and games job but uh one of the things that uh I I had
+to deal with was we needed to add some security cameras and just like doing the quoting for the security cameras uh
+guess what the security cameras themselves were $100 each and it was $5,000 to run the conduit for the E
+that's pretty that's pretty common pricing yeah yeah and uh you know when you think about that you realize uh you
+know when you have to build out infrastructure in the real world for actual systems uh it cost a lot of money
+especially you know labor for folks to do custom stuff like that to just run metal conduit with uh with ethernet
+cables you can actually end up being like just the cable itself and that conduit can end up being you know much
+more expensive than the sweet Hardware you designed that's supposed to be sexy and do something you might just be not
+unable to complete the project because you can't actually get a ethernet cable and power to it easily um looks like we
+got some questions in the chat oh no nothing's there okay cool not yeah keep going okay keep going so uh why am I so
+excited about this uh I'll tell you one thing so I used to be uh parttime on open mvy uh just basically side hustling
+this for the last uh seven years basically so you know it's a dream hey
+we like playing around with these things they were cool and then people started being interested and then I started working harder on it and we've been
+optimizing code and going for a long time and you know they're actually starting to get pretty decent like our
+performance we're pushing these processors to the limit uh I'll say this we've we've actually made our current
+system like four times faster with the same processor just by one you know better frame buffer architecture so
+we're not dropping every other frame instant 2x you know frame rate boost then dma offloads where the CPU wasn't
+capturing each line of pixels at a time so freeing up 50% of the processors performance so doubling again and then
+you know learning how to write algorithms better where we don't waste a huge amount of CPU time redoing the same amount of work and then adding um simd
+performance to algorithms and it's just been you know if you look at our code base um from you know five years ago uh
+the same Pro you know the same micr controller the same uh Base Hardware system will be on the order of 2 to 3x
+to 4X faster with just code changes and it's it's crazy that you can have that much performance by just being better at
+understanding what you're doing well and that's also I think you know an important difference between those are
+the kind of gains you really only get when you're not part-time when you're like kind of all in because you have the
+time to do it or you're taking the time making the time to do it and uh so it's it's really awesome to see yeah yeah no
+it definitely is um I did a lot of those part-time but that's what's setting me up to think about doing it full-time now is is is realizing you know I thought
+these things were just slow and whatever you know it was cool that we could do this you know kind of coding but then
+starting to realize that they could actually be competitive with application processors is the it's it's kind of the
+Insight that makes me want to go full-time on this and give it my all so that um we can see what happens uh and I
+say this is important because microcontrollers uh they're kind of big you don't think about them often but
+they actually Eclipse Linux based processors significantly um it's it's a $44 billion
+Market well will be in 20130 um in 2022 3.2 billion of these things were shipped
+now of course all of them weren't like high-end devices like a lot of them were like a microcontroller in your remote
+but uh they are literally everywhere um I mean if You' if you've ever used an Arduino to Blink a LED you'll know what
+I mean like that that used to be a 555 timer yeah people put a lot of effort into designing electronics and nowadays
+the thing is throw a microcontroller on it write some code microcontroller does the thing um you know no one's doing uh
+integral like PID control using op apps anymore like they did back in the 70s that's that's not a thing and in many
+cases it's cheaper to throw a microcontroller at it than to buy a 555 timer chip oh it is it's cheaper easier
+it's just you know this is the nature of things uh people use mcus everywhere and if you need one that's hardened and
+radiation tolerant or whatever for some crazy app you can do that too um the lower mcus are fine for you know
+applications where you say I want to do everything in analog um anyway so historically these have been basic
+processors you know they just had like eight bits of performance and Etc they weren't that interesting um but not
+anymore um you know the latest ones coming out in 2024 like at the 16 nanometer finfet node uh they got
+megabytes of RAM on board that run at uh gigabytes a second like you'll have a 800 megahertz System bus that's um
+running at uh 128 bits at a time uh 128
+bits to 64 bits at a time on some mcus and that's giving you um 3.2 to 6 gabes
+a second or so bandwidth on the microcontroller and that's drawing you know micro that's drawing milliamps of
+power um and if you can fit your application by the way into that internal system Ram you don't need SD
+ram anymore which cost a lot of power like you know ddr4 Ram is not uh it's uh
+it's pretty power hungry and it requires board space um and it's one more thing that can fail yes that's true uh you
+also have megabytes of flash on board some of these mcus uh not all the case uh not always typically they try to
+locate it externally to do execute in place but there's some that have megabytes of uh flash or Flash
+equivalent let me not say it's flash uh I think it's flash equivalent at the that lower uh when you start getting
+into that uh that that fine node process geometry um but they're also including
+um neural network accelerators this is the big crazy thing uh so there's stuff
+arm has uh they're releasing this m55 core that has Vector dsps so it can do
+you know 8 to 16 uh values at a time of simd um and then uh again they're also
+putting though ethos u55 uh ml accelerator and so this gives you something on the order of 200 to 600
+gigaflops of performance uh this this actually you know Raspberry Pi 5 full boore all core is running at maximum
+you're at 100 gigaflops um and that's yeah and drawing uh you know all the power uh with a huge
+heat sink on that and you'll have microcontrollers that are going to draw almost no power outperforming it um
+that's not to say that you know the next version of the Raspberry Pi can just include a specialized accelerator uh
+which would very easily get it to that level of performance but uh you're seeing these things now coming down in
+chips that are going to be on the order of $4 or so um and uh even better uh
+specialized Hardware now um for actual image stuff so you want h.264 on a mic controller other stuff like that uh I
+don't know I mean who knows what's going to be happening um but you know vendors are starting to release uh things in the
+future for this kind of stuff we see it everywhere uh it's definitely H it's definitely been happening you know in
+China um from other various IP vendors and such and so uh 2024 and and 2025
+we're we're going to see these things coming on board um and so this is where open MV comes in uh there's no
+standardized library of software for all of this stuff it's kind of like hey uh you know there's SDK rewrite it
+yourself figure out your own application fight all the dma controllers um you know there's something called Cash
+coherency you have to deal with uh which is something that's very very brutal if you don't understand how machines work
+at the lowest level uh lots of great gotas and issues and so uh open MV
+really we want to be that uh software library to kind of make that easy for folks which it it's kind of like a open
+CV mixture but it it includes a focus on camera drivers processor drivers kind of
+the whole K you know the whole kitchen sync so you can just focus on writing some code versus having to build an
+entire operating system from scratch see we got a question so far
+yeah I see that we've uh so uh Antonius would like to know uh a little bit about
+Arduino uh compatibility with open open MV and um asking about C or C++ code
+with open MV yeah yeah so we're actually uh we have a whole all our code bases in
+C but we're built on something called micropython so it is not a Arduino programmable device uh there's a reason
+for that uh the the firmware images we ship are on the order of a couple megabytes or so to run the whole thing
+and so if you think about the Arduino s programming experience you'd be uh reflashing a couple you know megabyte
+large image each time you want to make a change uh instead with micro python which is also a pretty popular uh system
+nowadays it's uh you just send a python script that kind of high level tells the system what to do and um one of the
+things to note about that is uh you can write algor like our
+firmware is totally open source so you can go in there and do all kinds of crazy stuff whatever you want but we have like the easy mode layer which is
+micropython um and using python is really really valuable just you know data structures dealing with Malo free
+all that kind of stuff that would be really nasty right um if you had the you know if you have like a image function
+return a list of objects that you have to manually garbage collect yourself uh that that that'd be a lot harder for
+most people and so python just lets you you know easily forget about that and you know garbage collection will run and
+clean it up for you yeah micropython is great um I've I've done a few projects
+with circuit p and and a couple of other uh just being a python guy in general and you know open CV has a very popular
+python uh flavor of the library as well um it's uh really great to just be able
+to directly Port that knowledge over into working on a completely different system which is one of the you know
+great I think one of the great things about python uh in general yeah no absolutely uh what we see for our power
+developers is that they try to like go between the python and C um so we have a lot of users who just stick in Python
+and ask us to fix bugs but for anyone who's like I need to get something done quickly they actually like that hey I
+can get started in Python it's easy and then when I run into some issue I need some help on or I need to customize the
+system you can just dump you can just jump into the firmware and start editing things as you feel like um and it's it
+it makes it nice and easy to to kind of play with um I just wanted to I added this slide it probably is too much
+detail but this is the this is kind of like why I see this wave coming um uh
+furthering on that previous piece of information I was talking about microcontrollers becoming these superpowered systems nowadays uh it's
+kind of like you can have one chip to rule it all so uh what if you can if you're building a system what if you can
+save on your of materials by cutting out the need for extra RAM and cutting out
+the need for having an operating system and a hard drive uh what if you could save on Space you know physically you
+need board space on a PCB to say you know to add those two chips and then what if you could save on power
+consumption uh that's kind of where we see uh this this trend going with these superpowered mcus is that uh when you
+shrink your application and you just make it really focused on doing that one thing it needs to do you're going to be
+able to unlock these three different Savings in one go and um I I I believe
+that that's going to start really changing things in the embedded world over the next 10 years and so that's
+what I'm excited to see on how that shapes and unfolds got another
+question yeah I see one here um Naser says tensor flow in a microcontroller it
+looks killer could you elaborate please oh yeah yeah actually so Google released tensorflow for microcontrollers a long
+time ago um we work with a called Edge impulse who uh basically operationalized
+that so they um they started off with uh like pretty much the guys who helped generate tensorflow for microcontrollers
+all left Google and then basically went to work at Edge impulse and uh more or less they are the company that helps you
+do like a they have like a roof flow like pipeline where uh you basically upload your image data you train a
+neural network online and then you download it and you can just load it onto the system and it can run it can basically we have a tensorflow library
+on board and so that execute the neural network and um what's nice about that is the tensorflow library in the future can
+directly utilize these uh you know hundreds of gigaflops neural network accelerators so on our current system
+you you may not be able to get the the maximum performance you can get just because the it's everything CPU done but
+in in future systems you'll have that accelerator just turn on instantly and you know 100x performance um on a
+different platform uh yeah um I think uh we got Phillip here yeah Philip would
+like to like to know just just Philip says they're just starting out with computer vision uh do you have any
+suggestions for for projects to uh that are sort of forward thinking like toward
+2030 any any projects for someone new in computer vision to you know how can they
+prepare themselves for what's coming next versus what we have today what's coming next versus what we have today
+well my focus is mainly just on the cost optimization and flow out of seeing these things appear and everything so I
+I would just say like think about where could computer vision go if cost and
+power consumption weren't a problem like imagine this let's say you're playing golf and you're um you know you build a
+golf cap that has two cameras in front of it on the golf cap and it can actually track your golf shot and that's
+only a $30 ad onto you know but you buy a golf cap and it's like the Supreme version and it cost a 100 bucks or Al so
+Supreme would add a zero so it's a th000 say it's a th ,000 yeah no no that's too much that's too much though I'm talking
+about like regular person golf cap so let's just say but that's for the that's for the supreme logo it's the cap is $20
+the logo is you know 980 yes absolutely okay let's say it's a Nike cap though
+but uh you know in the future we could we could potentially have literally a camera in that in your in the in the
+front uh that that hard Edge on the front of a golf cap and that could be tracking golf shots I mean the number of
+people would want to buy that millions millions that it's it's crazy what you could do when you free yourself from
+okay this thing's got to have a huge battery and it's going to have this certain PCB size and we can't make it
+flexible and it you know has a fixed camera with a huge lens on it and when you start getting into oh wait you know
+we're going to build this stuff into clothing and you know we can build this into our light switch because it's got so cheap gotten so cheap and low power
+that's that's kind of what I try to keep your eye on is is where can we push computer vision you know to the edge uh
+and then Beyond the Edge like right now when people say Edge it's still mounted to a wall like how can we get it off Mount off the wall you know as the
+that's a Michael Jackson song great Michael Jackson album actually yeah yeah big big one and then we have fion um
+what's the estimated prices uh so we sell our system for a little bit over $100 um you know uh it used to be
+cheaper but we had a lot of uh customers asking us for I/O interfaces and so we
+realized that uh it's better to make it more expensive so you can connect it to anything than cut the price and have it
+have limited functionality um the the base chip itself though is a lot less expensive so uh these mcus can be gotten
+from you know less than $10 to actually build something with uh I try to run aany I'll take over the screen share for
+a moment here and uh and share the open MV store here so people can get a little
+little taste as it were all right folks yep there you go so uh currently
+on the open MV products page you want to tell us anyit anything about these in
+particular I see the the RT 1062 is the new new kit on the blocks yeah yeah yeah so RT 1062 we hired a professional
+photographer to actually take good quality pictures that's why it looks so good it's beautiful um beautiful you know for that for that system one of the
+things we really focused on was connectivity um so we added ethernet on board uh um you know Wi-Fi bluetoo bluo
+um basically USB highspeed uh there's secure crypto chips on board uh it it
+basically is everything you need to have a development platform that can be put and deployed into uh iot like
+applications um this drove the cost up a little bit but it was all for uh just making it easier for folks to actually
+be able to to actually deploy this device into a real environment um so
+that was kind of our goal there because when we first started doing this was more like let's just slap an MCU on and a camera together and see what happens
+and and that works but then a lot of folks are left with when they want to actually build a product and scale this out uh it becomes challenging because
+you can't connect it to the right stuff and so we tried to alleviate that with this system by actually having real
+connectivity built on board which I'll I'll demonstrate actually later in the show today it's killer that Wi-Fi is
+built in on that that's a big deal yeah yeah no it it really helps um there's some examples of you know tracking uh
+one of our biggest selling features is blob tracking because it's super easy you know it's a it's a very easy to train classifier um we've got a lot of
+kids who use our product actually for something called the robocup um we've we've I'm familiar uh for folks that
+aren't familiar give them a little the Iggy on the robocup oh yeah you know more or less they got a robot that needs
+to basically knock a ball into a goal and so uh we've got that feature uh you
+know covered they use a a tical mirror that kind of displays everything uh
+circularly around the camera and then they just use color tracking to find the goal and that the robot's able to drive
+around and see 360 around it um there's a few other things here I want to mention uh the Arduino Nicola vision is
+kind of like a concept camera um that uh we see folks uh that that's been really
+popular uh so this thing is the size of a posted stamp so literally size of a posted
+stamp that's the whole system uh it's got Wi-Fi Bluetooth USB highspeed camera
+microphone Square that's nuts yep and so this is what I mean by microcontrollers like you can make tiny systems put them
+in anything you know we're not we're not uh if you had to add the emmc and if you had to add the SD ram then you know all
+of a sudden that form factor doesn't work anymore just because those two chips alone aren't going to fit into that package and this is where I talk
+about you know hey we're going to be able to put these things in all kinds of crazy systems uh because they're so tiny
+um and yes we do have barcode detection and QR decoding on board the system so you can do that kind of stuff uh go back
+yeah and then we had uh just some fun projects uh so by the way the H7 plus and the H7 R2 those are older systems uh
+those are cheaper because those just focused on um no connection like basically it's just microcontroller and
+camera and pretty simple but that that's what I meant about you know the lack of you know connectivity the the challenge
+there is they're not able to get it online easily um and then uh one thing
+we did that was pretty interesting was a concept camera called the pure thermal open MV uh and so that one you know
+microcontrollers actually can drive HDMI I I didn't know it was possible but I gave it a shot and it turns out they
+have a LCD bus interface and we were able to actually output uh HDMI uh to a
+TV uh using a transmitter chip wow and uh the idea here was to see like what
+could you do you might want to skip ahead in the video looks like there's some shout out to uh shout out to our
+friends at hackster.io the official Community platform of open CV yeah so this one was actually showing off mix
+thermal and color tracking at the same time so you combine a Fleer lepton with
+uh just a 5 megapixel camera and then we added a display and we also added uh battery charging uh RAM on board Wi-Fi
+uh we kind of went overboard here uh so it actually has too much stuff on it and it really wasn't cost optimized so this
+is my first time like getting into just you know going at it and doing everything we wanted to do um yeah so I
+learned from that though which is you know you do need to keep that price is a feature and not forget about that this
+is the this is the open MV kitchen sink yes basically um but uh yeah it it was
+fun to do [Music] um some nice lenses over here we got
+infrared filter lens yeah yeah all kinds of stuff um you know one of the ideas
+with open MV here is that we just wanted to most of the store products kind of help you enable your your idea like the
+Fleer lepton adapter so you can do theral is one thing that people like a lot um and then uh there's Shields also you
+can buy to like do Servo output and Etc and all that great stuff even TV um like
+fpv drones we had people doing that back in the day oh wow it's great little yeah CV cvbs or whatever the yeah yellow yeah
+you might think who does that but it actually turns out it's a great way to have a little display because you can get a $15 LCD screen that you know has a
+ntsc in and then people actually will build machine equipment where they'll take an open m vcam and just mount it in
+a production line and uh they'll actually just have a little screen that's attached to it that shows off
+what it's doing as it's doesn't have to be doesn't have to be 1080p they're they're just trying to make it's just
+for no glance at you know yeah they're just doing like 640 by 480 or 320 x 240
+and goes on a screen and it's just meant to be like if it's if it's if the camera is like looking at uh um labels or
+something like that and verifying it it's just to have to make sure machine is not you know going crazy and doing the wrong stuff right um anyway uh can I
+take over again yeah please do okay actually here we'll we'll pause here before you share again and we'll do
+our trivia giveaway we're we're about 12 minutes to the hour so um now is the time in the show where we give away
+something to you in the audience I'm going to ask a trivia question based on the presentation from
+our esteemed guest quab and auman uh the first person to answer that question
+correct directly in the zoom chat will win the open CV course of their choosing
+if you have won in the last few months please do not answer and give other people a chance to win I'm talking to
+you partha no I think I think you're time you're out of trivia jail actually it's been a couple months so we've got a
+trivia shark in here um get ready to answer in the zoom
+chat so uh quaba talked a bit about his career and discussed the first camera
+that he worked on what was the name of that
+camera what was the name of that first camera there we go ah got it pamu pamu
+quickly just like Get Out of My Head the answer was CMU cam CMU cam was the the
+answer to today's trivia question congratulations to uh Pudu please send one email to Phil atop cv. org go to
+open cv. org University pick a course tell me the name of it and we will make sure that you get access to it toot site
+uh with that being done quab take over again all right um looks like we might
+go a little bit over but that's good though yeah we were we were worried we were going to be light today but you know turns out put the two of us
+together we can talk yes absolutely all right uh let me answer some of these questions a little quickly before I go
+ahead um do you know if anyone has built 360 Vision systems with your camera um
+yeah that's actually literally again what the people who do ROC Club do um they they don't they're not trying to do
+though the crazy dual camera you know the Dual lens thing where people do image stitching though instead what they
+do is they just have a mirror that the camera looks at that's radial and so when the camera stares up the mirror
+kind of sends out it it basically has an image of everything that's around you in
+360 and that allows people then in robocup to basically Drive the robot in all directions um with the Omni wheels
+that they have on those systems uh to kind of find a ball and such it's it's not really about um it's not it's not
+like the 360 video you see when people are doing AR glasses and such that's a that's a different kind of application
+um then people have de mono feeds [Music]
+um wait let me see there are ways to capture de from mono feeds do you guys experimented realtime de data um yeah so
+de data it's it's been a challenge for us to look into um right now one of the
+one of the issues with that is um so doing stereo cameras we definit like uh doing the stereo coherency
+calculation that's actually really CPU intensive uh we had a customer actually build a shield that attached stereo
+cameras to the Arduino portenta and then I actually wrote um you know the basic uh stereo dep that's information the the
+same kind of one open CV has and uh that ran it like one frame a second it's it's really hard to do that in software so
+there's a lot of Hardware accelerators uh to do that kind of stuff and uh that is not yet something microcontrollers
+have access to uh there's also the problem of if you're doing uh something based on time of flight sensing uh
+they're really really uh those things require a lot of power that's the that's the general problem there that we've
+seen or you get into really specialized systems that are doing DOT camera Matrix and such and just as uh you know one to
+two people in the company right now it's uh it's really hard to focus on those applications without having a bigger
+organization um but it's definitely possible to integrate a depth camera feed uh would look like normal data it's
+just a lot of engineering work to bring something like that to uh to reality um
+then we got Brad here uh what display could I use on my bike helemet that sees traffic behind me or my golf cap that
+follows my ball um yeah I mean uh if
+that's in pertains to the open m vcam uh I mean there's there's pretty much an infinite number of things that you could
+do there uh we sell a little LCD shild um I can't say though that's exactly meant for what you want to do uh you
+probably will need to do some more I mean if you want something that's actually like nice and doesn't look totally hacky that's uh that's a harder
+problem to solve to to set all that up it depends on how cyberpunk you want to look
+yeah um and then spum we got another question do you have plans to add a depth sensor like in competitive real
+sense uh yeah as I mentioned before um it's a lot of work to bring one of those to Market uh incredible amount of work
+um but uh actually what we're looking at um and the most realistic thing we would honestly do is that um you know
+companies like St are actually releasing time oflight sensors that have uh 16 by6
+grid output uh coming soon to reality uh so this means which is a folks might not
+be aware why that's a big deal could you kind of give them that scoop oh yeah yeah so you know right now there's time
+oflight sensors that are 1D so they uh they can measure about 2 meters with uh
+little chip and you can see about two meters ahead of it and it's one-dimensional now St has one that is
+at 8 by8 so it can see a 8 by8 grid of 1D depth in front of it and the most
+recent one they're about to come out with is a 16 by6 grid of 1ed death and
+and you think about that it's 2 meters it doesn't really have enough detail to make out what the heck it's looking at like shapewise but if you combine that
+with camera data it can then tell you exactly what that dep is of an object um
+with 2 meters inead of you and then match that to the camera data um and those and those chips draw no power and
+they're very tiny and uh all the DSP and processing is inside them so they're a lot more easy to integrate than having
+to deal with a separate camera and a dot matrix projector or um doing something that's active time of flight
+[Music] elimination yeah thanks for that um
+Miguel would like to know uh do you have a GPS Shield that could send location
+data yeah um we're working on that actually uh I can't answer anymore but
+uh we we hope to have some product announcements soon in the future where we're able to offer GPS uh cellular
+connectivity uh and uh loww and and other various features so you can get
+this thing online more easily awesome um the form factor of that time of flight module um you're
+looking at uh th Those sensors from St uh look at the VX uh sensor line and and
+they're basically on the order of like you know 3 mm by 3 mm or so super
+tiny all right um so uh before I go into a demo I want to keep my time conscious
+here um just want to mention our value and you know how long open MV has been around and such um so you know the way
+we've been kind of surviving is uh this is kind of like uh I'm full-timing this business now versus it being a side
+hustle um but uh the way we've kind of been uh working is uh we have the open
+MV Cam and accessories um this is basically the reference platform uh it's sold into a long taale of applications
+and products so we've got people buying these for literally random stuff all over the place and we've shipped about
+30,000 of these since we founded the company um hopefully that number will go up though as I actually work full time
+on your um versus part-time and then um we also do software and Hardware licensing which is has really been
+helpful for us uh uh pretty much this is like the Arduino uh Nicola that's uh our
+design our firmware runs on that but Arduino licensed us the idea and helped make it and so they sell the hardware
+and we basically do the software support and we've uh done over 70,000 uh units
+uh more or less doing that and these systems go into all kinds of crazy
+stuff total that's over that's over 100k units total my friend yes it is it is
+and I I was surprised by that number I looked up uh you know what our sales data was and I was like wow it's it's
+that high I wish I you know was making more money doing it but uh selling
+Hardware is not uh you know the margins aren't amazing unless you're selling like the Top Line stuff right um yeah uh
+but you know one thing I wanted to mention you know why we're talking with open open CV you know and we have the
+same open in our name is that we are open source company um we uh have everything uh online actually so the
+desktop development software we use to program the cameras along with the firmware itself 100% open source um it's
+uh actually been nice though it's helped kind of position us as a market leader in this kind of microcontroller computer
+vision space because we have some level of code quality and we have to like you know make sure commits are done well
+that we structure PR reviews and things like that um and you know it's like we
+have competitors who will take our code clone it um not even clone it sorry they'll take our code make a zip file
+include it into their project and then say it's open MV compatible and um you
+know it's uh um let me see the Nassar uh you can I think you can just go to open
+mv. and then you can find everything there on our website um yeah no it's uh
+you know one of the things we've done is actually tried to do like a good software development process and
+maintain support for the products our customers Buy um so all of our openm vcams even from
+2016 are still supported and we still release firmware updates for them that improve the functionality um we're able
+to do that because we structured things in a way where you know as we add new features they they go to all systems
+that can support them um and so this has allowed us to win Partnerships and contracts with arm nxp St Edge impulse
+arduin and more um you know and and hopefully other you know in the future multi-billion dollar customers so I can
+make this to a real business um uh just because we're we're trying to be the Forefront in this in this mover and
+Shaker that's basically delivering something akin to like open CV for microcontrollers a standardized software
+Library all right tremendous Now demo time okay too much talking oh yeah okay
+um so I wanted to show off some something fun I'm going to share my whole screen now let's do that I need to
+make a little sound effect for the the braak live demo sound effect if anybody out there uh any musicians in the
+audience you want to make something uh send it to Phil atop cv. org we need a we need a sound effect okay just
+checking my desktop to make sure nothing's important about to be leaked all right great can you see my uh
+desktop sure can all right so um I've got my open MV cam over here um to my
+left of me uh so I'm just gonna show that off real quick got my camera so this is my open
+MV Cam and so it's sitting right there um we have it attached with a Poe Shield
+um so um basically with the RT 1062 one thing we're about to release very soon
+is a Poe Shield that gets this online and we have it attached here via USB to my computer also so I can command to
+control it all right s cool so we're going to do a little
+script here um so one of the nice things you can do with the open MV cam is uh we have a rtsp uh video streamer Library
+buil into it um and so you can guess what I'm going to do next uh this is kind of how the system looks so we have
+this IDE called open MV IDE it's it's similar to the Arduino esque experience so uh you know basically you you don't
+have to open terminals or anything to communicate with it uh it's all integrated you got your frame buffer
+here your serial terminal and your you know your little text editor um and uh
+basically we're going to take this camera turn it on we're going to set the Pix format to JPEG and we're going to set it to full 1080p uh set the image
+quality to 90% JPEG and uh you know basically this script is going to run a
+rtsp server that will stream video so let's stop the thing run it and so the
+open MV cam now is doing is getting a DHCP uh lease over um uh the internet
+over my local land and so it's got this IP address great and so then I can switch over to my text editor so I got
+vs code here and uh thanks to chat GPT literally 5 minutes before this demo I
+was able to ask it how to do uh video streaming via open CV yeah and you know
+of course that's super easy to do um people have done it before and so chat jpt was like boom 28 lines of code
+including comments yes yes okay great cool so let's just run that real quick
+and see what happens boom wow look at that so my
+opening cam now is streaming video to the
+desktop looks great yeah that was uh you know last
+minute pip install open CV took about what 60 seconds something like that and
+uh chat GPT write us rtsp streamer took another 30 seconds and here we are so
+now here's the thing I wanted to show off now see this is just it's streaming video right so the the thing to appreciate here is that yeah we we could
+act like a normal camera um that that ain't the point though of open MV it's not to become a normal camera uh even
+though you could do that so if you wanted to do like a thermal camera streaming rtsp to you know open CV for
+example um you could do something so uh yeah as you see uh alol um was
+mentioning why is it helpful I just wanted to show a way that it was interfacing with it um no uh more of the
+stuff we can do on board is like let's say we want to do a tensorflow object detection um we can run a face detector
+built-in and so me improve the resolution a little bit
+here all right so we can actually do face detection on board um this is via
+something called the fomo algorithm that's developed by Edge impulse so it's basically a image segmentation algorithm
+that's uh defining a grid of pixels uh per um a grid of pixels that represent
+the centroid of faces in the image and such
+um very cool yeah but uh you know that's the this is streaming over USB the the
+reason to show the rtsp system though is just to show that uh you can get things online like moving those jpegs and such
+that's a lot of data and so that's kind of what I wanted to uh to get out there um another nice feature for example is
+uh barcode detection um or April tags actually that's one of the things people like like a lot yeah for robotics super
+important also lots of safety implementations we'll use so we got to go to a lower res on this because this
+is a very CPU intensive algorithm we can turn up the res a little bit though on this system so I'll do that in a sec uh
+so list of a tags here boom uh being able to detect all of those uh very uh
+simple for the system let's go up to a higher resolution um
+yeah and so this is one of those fun features that you know people actually really
+appreciate it's like you know we actually got the whole April tag Library running on board um yeah so hold on
+there sorry my computer has a little issue with the USB connection you know
+computers how do they work yeah um so it's it's a fun system though for you
+know one of the things like I was showing off there just trivially being able to change the image resolution
+solution uh is one of those nice things you have uh let's see we also have
+barcodes that's one of the bigger things people like is the QR codes with lens
+Zoom so I'm you know for example I've got my raspberry pi02 based cyberdeck project I'm working
+on would you say open MV is a good solution for adding you know video to that or should I look to something a
+little Dumber perhaps well if you have a Raspberry Pi I think the the thing you'd want to do there is just directly attach
+a camera to it it makes more sense to the pie cam honestly um where we get into where we get really interesting is
+when you want to have like a low power system and like the the conservation level stuff where you need to kind of
+you know maintain uh that uh being able to be in a connected environment and being uh in some way where you need to
+run on that low power for a long time for long periods of time yeah yeah uh it's it's a little bit hard to
+demonstrate uh it via live Zoom but you know we can we can run scripts where you can on demand just you know drop this
+thing into a deep sleep mode so for example there's a there's a real-time clock on board this system um and so you
+can just sport sayy okay I want the real-time clock to be this you know um once you do that then uh you can
+actually just uh shut the whole thing down and then wake it back up again after a certain amount of time and see what the time is I see 2014 is that the
+open MV Epoch uh I think that's the micro python Epoch actually ah okay okay
+um yeah let's uh let's uh do this real quick this is a boring demo but it's uh it's kind of like what people actually
+care about when we have conversations with folks who are going to build a lot of units yeah um so it's uh you know
+okay so let's set the time date here 2014 okay print
+[Music] it is it not called wake up hold on why
+isn't this example running Brave life demo sound effect yes
+uh let me just uh Google the docs here real
+quick okayy I mean if the docs are good enough that the founder uses them that's saying
+something yeah
+it's okay RTC so there is uh there's this one annoying thing with micropython there
+was a Schism uh a while back where they uh the folks um micropython folks they
+uh they have this mod so basically different processor architectures there's something called The Machine
+module and there's something called the pyb module and so we're still in the process of getting our code swapped
+between the two um so when you do in Hardware uh some of the code might work on the pyb module but not the machine
+anyway it's a l it's lowlevel detail but there's like two apis that do the same thing because micropython abandoned one
+a long time ago and uh that's the best way to say it um uh so it's a it's a
+pain that we're still going through that porting process anyway um okay so this
+is the time it would have printed previously okay and so the system just
+restarted you could hear that bing bing boom boom sound and uh let's see where's going on now so it should be about 10
+seconds Advanced or so from once it last dra oops have to turn off that
+off oh yeah okay yeah so live demo yes Brave live
+demo okay so let's do this okay so we're going to connect we're going to run okay
+so we see the time of date right here 2000 this time all right and the system's back up
+reconnected okay and so now we're not going to set the RTC and we're going to do that alarm setup and we just need to
+make sure that we uh that I'm a little bit little bit disappointed that you didn't set the time circuits to November
+5th 1955 but I'll I'll let it go this time okay and so let's go to sleep and
+give it 10 seconds and it's going to wake
+up sorry I'm just uh jazzing right now in the live demos these are kind of boring
+but this this is the feature I wanted to show off anyway okay it's a code you don't write when you're Jazz you know
+yeah yeah anyway so run it now and you can see
+it's Advanced by about 47 seconds um and the the reason to show that off is that that was entering low power mode the
+Deep Sleep uh going down to the microamp current consumption and so uh literally this is the feature that uh it doesn't
+sound that exciting but this is the feature a lot of people like because again when you hit that deep sleep instruction you're down to 30 microamps
+your microamp of power you set a realtime clock time and you have the system wake up every minute do something
+then go back to sleep and that's you low power yeah that's how you get years of
+battery life it's by having some code like this um once you set that real-time clock date and that is running you can
+you know set and forget this system and I showed off the rtsp functionality and such in image streaming and that was to
+drive home the point that you know we have the UR request module on board in Python so you can do uh you know get and
+post request online so you can wake the system up every minute or whatever have
+it connect to internet uh push an image online of what you see and then go back to sleep and so this is where people and
+conservation labs and such really get jazzed about the system um because they'll actually uh
+the deep sleep can be woken up not just by time but a interrupt and so it's possible to use a p motion detection
+sensor for example um and that will be able to when when people move around or
+such you can then wake the camera based up uh up on on that movement and then
+when that happens take a picture do something and then go back to sleep
+basically excellent excellante as they would say in
+espanol um we're about 10 minutes past the past the hour uh quab if folks want
+to find you online and and follow open MV um what are the best places and ways
+for them to do that yeah yeah so uh you can find us at
+www.opm.com uh just share my screen real quick for the website just to show you what I'm talking about please do
+[Music] um okay give me one sec and uh we have a question that just
+came in yes I see that uh mayor um do you
+have a recommendation for battery which can be used with this cam but for like wearable device
+applications so uh I mean honestly uh with our new system we really built
+ourselves around the spark fund um uh J the two pin jst batteries that they kind
+of sell uh so spark phone has a huge number they're pretty popular around the web anywhere so um honestly it's like
+any battery you want to use uh pretty much any 3.7 volt LiPo battery works it's really not hard um yeah we we try
+to make it as standard as possible and easy to use uh so we definitely we have a newsletter sign up on our website uh
+and so if you can sign up to that to get connected we have Twitter we also have a YouTube channel you can go to uh to kind
+of follow us and um then also a uh you know know um we got a Blog um and so if
+you sign up for our newsletter you'll get blog updates as we release new stuff excellent excellent excellent yeah
+go check out open MV follow subscribe smash that like button etc etc
+etc all right thank you yeah go ahead and unshare your screen there for me if
+you will will I'll do our little little outro um yeah so uh Our Guest next week
+will be Bart T who will be showing us this awesome piece of recently released
+open- Source Hardware and software The Owl and always on wearable AI device
+sort of like that uh rabbit device you've seen around except this one runs locally and is on GitHub um really
+excited to talk about this with Bart on the show next week join us for that
+don't forget to support open CV if you've got the inclination and the resources we really really do appreciate
+it you can go to open cv. org /s support to do that if you're a student anywhere
+in the world apply for Google summer of code applications are open until April 2nd check out the opencv 5 workboard at
+github.com org opencv and follow us everywhere we are on Blue Sky Mastadon YouTube
+LinkedIn etc etc etc take care of yourself out there
+folks take care of somebody else if you can and have a great day wherever you may be thanks so much for joining us
+we'll see you next week thank you
