@@ -13,17 +13,21 @@ def find_answer(input_context, question, openai_api_key):
     input_context = re.sub(r"\s+", " ", input_context)
     question = re.sub(r"\s+", " ", question)
 
-    # Define conversion prompt
-    prompt = f"Answer the below question(delimited by triple backticks) using the following context (also delimited by triple backticks). Answer the question, not looking for completing the context.\n\nQuestion - ```{question}```\n\nContext - ```{input_context}```"
-    print("Prompt:")
-    print(prompt)
+    # define system prompt 
+    system_prompt = 'Use the provided context delimited by triple quotes to answer questions'
+
+    # Define user prompt
+    user_prompt = f'""" {input_context} """ \n\n Question: {question}'  
+    print("User Prompt:")
+    print(user_prompt)
     print("="*100)
 
     # find/generate answer using LLM
     response = client.chat.completions.create(
         model="gpt-4-turbo-preview",
         messages=[
-            { "role": "user", "content": prompt}
+            {"role": "system", "content": system_prompt},
+            { "role": "user", "content": user_prompt}
         ]
     )
     print('response\n')
@@ -48,7 +52,7 @@ if (len(openai_api_key.strip()) == 0) :
 
 # define parameters 
 episode = '127'
-question_idx='1' # use '' empty string if only 1 ques asked in the episode
+question_idx='3' # use '' empty string if only 1 ques asked in the episode
 context_filepath  = f'./samples/opencv_live_episode_{episode}/context.txt' # shortened_context.txt
 question_filepath = f'./samples/opencv_live_episode_{episode}/question{question_idx}.txt'   
 
