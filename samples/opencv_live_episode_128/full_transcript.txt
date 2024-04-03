@@ -1,0 +1,543 @@
+CV live this beautiful Thursday morning let us know where you are joining us from in the chat system wherever you're
+watching I of course coming to you from beautiful fragrant Soma in San Francisco
+California um our guest this week is Caitlyn Gan Caitlyn where you joining us from
+today I'm from Southern California um and I go to school in
+Newport Beach right on I'm quite familiar with that part of uh SoCal I
+lived in Carl's bad for a while um so little bit pretty close closer
+than San Francisco anyway um we were talking before the show and uh I thought this was very funny first of all I'm
+going to take credit for getting you out of class [Laughter] early this is the my proudest moment on
+the show whenever I can get a high school student out of class early it just I get a little spring in my step uh I was I was a high school student once
+myself um you're you're in the music room at your school right now actually is yes yes
+amazing I think this this tops the time that uh Dustin Freeman was our guest on
+the show and he worked at Facebook at the time and he kept getting he kept getting like shoed out of the conference
+room he was using and so he kept to like move conference rooms it was very funny um folks in the audience will remember
+that but yeah uh good morning hello Kevin from basing Stoke UK hello from to
+Berlin hello Winnipeg the United Kingdom Nigeria David from Hungary Steve
+from Smart Manion Inc always good to see you Steve hello Richard from
+Maine hello from Yokohama Japan hello from France hello East
+grinstead they got some really incredible names in the UK I got to give it up the the localities there just just
+a beautiful beautiful naming nomenclature they have there um India
+Russia Israel Pakistan coming in from all over here on
+this beautiful Thursday morning we will get started in just a few minutes here um just going to let people you know
+filter into our various chat systems and video streaming services we are live on
+Facebook YouTube Twitter LinkedIn and twitch no I am never calling it X I will
+die on this hill it is Twitter it will always be Twitter I
+agree excellent I'm glad we agree hello Uganda
+Mexico Irvine California hello California hello
+Madrid somebody in the channel just called me Philly Philly that's not a nickname anyone has ever used for me I'm
+not from Philadelphia uh will we be giving certificates for
+watching this conference no no you won't um has anybody else noticed the proliferation of these Zoom Bots they're
+becoming a bit much we might have to start telling people not to use them like it's fine if one person in the in
+the LinkedIn or it's fine if one person on Zoom is using one of those AI summary things whatever but there's like five of
+them and it's too many oh hi from Philly to Philly that makes a lot more sense
+thank you kha several people agreeing with that it
+will always be Twitter I appreciate that uh flattery will get you everywhere folks I think now they're adding more AI
+assistance just to make me mad I forgot that I don't run the show the audience runs the show
+it's thank you so much for uh reminding me out there
+everybody yeah all right I think it's about we can get go ahead and get started here I'll let me switch our
+view okay hello everyone and welcome to open CV live I am your co-host with the coost
+the second banana who is second to none I'm also your plus one and only Phil Nelson director of content creative for
+open CV flying solo today as Dr Sati Malik is flying elsewhere today um our
+guest on today's show is open CV AI competition Second Place Grand Prize winner Caitlyn Gan whose incredible
+project uses open CV to extract star radial velocities that may contribute to
+the detection of Earth 2.0 super exciting but what's most impressive about this is that Caitlyn made this
+project while still being a high school student so we are super excited and uh happy to have Caitlyn here um before we
+get to the presentation I've got a few things we need to cover at the top of the show the first of which is we are
+taking questions from you in the audience please use the zoom Q&A button if you're watching in Zoom or just type
+your question into the chat system wherever you're watching across all of our various Myriad channels um we're
+also doing a giveaway to you in the audience later in the episode I will be asking a trivia question based on the
+presentation from our guest and you out there in the audience will have the chance to win the open CV course of your
+choosing you can go to open cv. orgun University to see what courses are on
+offer um that's almost it for me but we've got a couple more things I want to talk about here before we get started
+I'm going to share my screen real quick and uh show the folks out there so
+uh Caitlyn's project was part of the open CV AI competition 2023 was sponsored by uh cottis and Seed Studio
+as well as our friends at hackster.io the official Community platform of open
+CV um see second place right there you can check out the project here on hater
+and uh there's also code there's a very very nice video here that Caitlyn put
+together together which um we can uh talk about in a bit um really looking forward to this
+episode um did you know that open CV has merch now you can buy open CV t-shirts
+buttons pins pet bandanas uh three different flavors of the I love open CV logo on a shirt or
+button or bag or whatever we have English simplified Chinese and espanol also this week importantly for
+folks out there following the open cv5 live development progress after our Indiegogo campaign earlier or later last
+year um we've begun posting weekly updates here on the open cv. org blog
+where we'll be able to you'll be able to pop in here after the uh opencv team has our weekly meeting um we take their
+notes and turn them into a blog post for you all so you can see where things are going of course you can always this week
+we've talked a little bit about uh doxygen We've updated some of our docs in advance the the documentation
+software in advance of doing a huge amount of work to update all of the documentation on as part of
+the open CV project right now which is you know quite a bit of stuff and uh we're we're really happy to have a
+couple have a new extra hand to help on that uh hi to uh gamer
+um lots of work on the on the uh deep neural network engine on open CV as well
+this week but of course if you want to follow what's going on with open CV you
+can always find it on GitHub uh the opencv 5 workboard at uh opencv do or
+github.com CV what's be what's a planed to be worked on what's in progress what is
+done um you know take a look at uh maybe you'll find something that's interesting to you or that even possibly you can
+help out on if you have the expertise um that is about it uh please uh follow
+open CV on Twitter we're on Mastadon we're on Blue Sky we are on LinkedIn
+we're on YouTube we're on we're not on Instagram or Tik Tok yet I think I'm
+gonna have to hire someone about 20 years younger than me to do that because I just I don't know it I don't know it
+uh but without further Ado um our illustrious guest Caitlyn Gan Second
+Place Grand Prize winner in open CV a competition 2023 super excited to have you on the show even more excited to
+have assisted in letting you leave class early welcome Caitlyn yes thank
+you yeah introduce yourself yeah yeah so I'm Caitlyn I'm currently in high school
+so yes Phil did get me out of class early and I might even miss some of my
+next class which is very exciting you're very welcome yeah um I guess a little bit
+about me um I'm Kaitlyn uh uh I like I I
+like to play lacrosse I'm on my school's lacrosse team um I'm really passionate about like technology definitely open CV
+and what I will be talking about today which is like exoplanet detection and yeah overall I'm very
+passionate about the stem field so yeah great uh we're so happy to have you on
+the show you know one of the things for me personally and I know it's true for SAA as well that one of the reasons we
+do this show at all and one of the things that that makes us the happiest is when we can bring younger people onto
+the show that you know are maybe just starting their careers or haven't even started their careers yet and you know
+help them kind of get their foot in the door but also to Showcase their the enthusiasm that uh folks have out there
+for open CV of all ages and it's so exciting to us to see someone that uh is so young and so passionate for this
+stuff um and has uh done such really interesting work as such a young age so
+uh thanks so much I think we can uh we can get started with the presentation whenever you're ready yeah of course okay so I have a
+presentation prepared for you all um it's about the project that I will be
+talking about today uh right okay so as we wait for the
+slides to start sharing okay yeah looks good okay all right so um this is my
+title slide as you can see and essentially my project is using um open
+CV to extract radio velocities for exoplanets like detecting exoplanets if
+it doesn't make sense right now don't worry um I'll explain it all in my presentation um and yeah okay so the
+brief outline of what I will be talking about today in the presentation is um
+it's basically presenting my proof of concept research using open CV
+um and so I'll start off with a brief introduction and like what planet detection is and how we can use another
+method called radio velocity to detect it and then I'll talk about using open CV and essentially like what motivated
+me to use open CV and like how I used open CV and then I'll talk about my results for my research and then
+conclusions as well as like um like lasting words I suppose
+and so throughout my presentation if any of you guys have any questions across
+all of the different platforms feel free to message I'm sure Phil will be able to ask it um I'm not sure if I can check
+chat yes um but he will be taking my questions for me and I will be answering them you all right yes okay so let's
+talk about what planet hunting is and when you think of planets you can think of like um the planets within our solar
+system which is like Earth um Mars Venus Mercury and so on so in the ancient
+times up until like 1846 we spend like 4,000 years detecting
+the first planets all within our solar system right but then in the more recent
+40ish years we've detected like thousands of exoplanets and we have
+right here it's it's over 5,000 exoplanets and essentially an exoplanet is a planet that's not within our solar
+system it might be another planet maybe similar to Earth orbiting a star that is
+outside of our our SCE system and so you can see that um in the past we've been
+using um like our eyes and telescopes which might be prec like it might not be
+the most precise way to find these exoplanets which is why um in more recent years when we moveed to these
+like really complicated sounding methods we were able to get much more um like we
+were able to find many more planets and so you can see that you have these
+different types of Planet detection methods and one of them is the transit
+which was developed in 2002 and the other one which I will be like focusing on today is the radial velocity method
+and so it's quite notable because it was one of the first methods discovered and
+it still U makes up a huge portion of
+the number of exoplanets discovered and so now that we understand what exoplanet
+hunting is basically we can talk about using the radial velocity method so it's
+the one that I highlighted over here got a quick question from the audience here
+already um of course what got you so interested in Planet hunting like was
+was there something you you watched or uh like what really piqu your curiosity here yeah I was always interested in
+space in middle school I did Science Olympiad and I did like the astronomy
+event for Science Olympiad so I've always been interested in space and exoplanets specifically interested me
+because I was interested in like in a second Earth and it's also really interesting because um I guess like
+climate change is a huge like deal in today's world and there's like a lot of
+events that like are like significant in
+on Earth today right and so we want to be able to like make sure that if
+everything goes bad then we also have like a second Earth that we can look towards but it also um the act of
+finding a second Earth it's um it's also very grounding because um when you try
+to find one you you find that it's like one really hard to find one and two it's probably going to be really far away
+from us and as a result we we really need to preserve what we have right now
+cuz we can't like a second while finding one would be like really helpful it
+might not mean everything essentially it might not mean much at all depending on how quickly things go down the tube as
+well um yeah thanks for that answer really really well said um I couldn't
+agree with you more yeah and so talking about the RV method we have um it right
+here so basically how it works it's also known as the dobler spectroscopy method
+where essentially when a star and when there's a star and an exoplanet the
+exoplanet exerts some amount of gravity on the host star so as a result when the
+exoplanet orbits around the host star the host star will actually orbit around the center of mass of the host star
+exoplanet system and as a result um from Earth when we look at this we can see
+that the star um comes closer to us when it's like orbiting and then it also has
+periods where it's going away from us and as a result when it's coming towards us um there there's this thing called
+Blue shift because of the dobler effect and as a result um we will
+have the Spectra of these Stars will
+appear shifted more blue when in actuality it should it should not be but
+when it's going away from us there's red shift because well it's going away from us so as a result because of this blue
+shift and this red shift we have these shifts in the wavelength and so using the shifts in the wavelength we can then
+calculate um this is the wave this is where the wavelength goes and this is um the speed of light and so using the
+shift and the wavelength we can then calculate the radial velocity of the star or essentially like how fast the
+star is orbiting the center of mass and so generally when using this radial
+velocity method you you basically calculate the radial velocity by
+cross-correlating Spectral data with the template Mass so what does this mean essentially you have two um Spectra and
+you can cross-correlate them by essentially like overlapping these two Spectra and trying to see where they
+like meet and how much the shift is between these two um like Stellar data
+and then as a result you can find the wavelength and then the radial velocity and then plot that and then figure out
+whether or not there's an exop pan so that's the standard approach um but we
+do need to proove this because um the current RV extraction Precision is
+around 1 m/ second and essentially to put this into context um for Jupiter um
+it would induce a signal of around 12 MERS per second um but for Earth since
+it's much smaller even though we are closer to Sun um our mass is much smaller which means that we have a
+weaker gravitational force which means that our signal is going to much less um
+and so our signal is around 9 cm/s so um essentially what this means is that
+since our current Precision is below 1 meter pers second we need to make it so
+much smaller for the 9 cmers per second and yeah basically we need to improve
+both the instruments and the RV algorithms to be able to achieve such um
+a precision and this is essentially what motivated me to do my project because I saw this and I was like oh we need to
+figure out a new method that could potentially be able to like make the um
+RV signal that we can exract smaller and so this is why I decided to use open CV
+for my project so um I'm sure you guys already know what opencv is you're all
+in the seminar but basically open CV is a very helpful tool that I used that can
+perform precise feature alignment between two images and essentially
+adjust the image angle and give you the picture in the view that you want so
+essentially um in this example I have here I have a book and then I have like a thing on the book and then I have like
+the top view of the book and then so once it detects the features you can then convert it to top view which is
+right here and you can see that this is this is the same image but converted into the top view because the star no
+the square is still there and you can see that it's um it's visible because we
+were able to convert the angled view to the top view through the homography transformation and so we can use this
+for detecting exoplanets because if you remember we were cross correlating the
+spectral data but if we were to change the spectral data to let's say images of
+the Spectrum then we can have essentially two images that we match the
+features for and then convert and calculate the shift so essentially um
+the example is here imagine we have one like wavelength dip I guess or like we
+have one uh uh low here and then we can see that this is at like one period in
+time like let's say T1 and then we can see that at 10 10 seconds or 10 whatever
+you can see that the wavelength has shifted a little bit and so if we were to stack these images on top of each
+other or if we were to use open CV to compare these two images we would be able to um figure out the shift between
+the two so that means that the two spectral
+images are like basically similar to the two images captured from distinct view
+angle okay all right so now I'm going to be talking about like what I did
+for being able to use open CV on my images so essentially what you do first
+is you build the image because the data
+that we're given is not given to us in image form it's given to us in like numbers where essentially if you have a
+higher number then will be like a peak and if it's a lower number then it's it's not a peak and so you want to be
+able to um basically make these numbers or these data sets that were given into
+images so essentially what I did was I just stacked all these values on top of
+each other until I created um such an image and additionally um you can also
+add noise into this because um sometimes when you're given the data you're not entirely sure what
+um how accurate your data is or if it's like 100% correct so if you wanted to
+test for um noise or if you wanted to make sure that this would hold up with
+like noisy data then you can also add noise by like stacking it on top of each other that's also an option um but for
+the um like slides and the demo here I won't really be going into that um but
+essentially you build the raw spectral line and the individual line I I know these images look very similar and um
+this is why we use open CV instead of just the human eye but essentially this one on the left is a line is a spectral
+line where we add the like we add all of
+the different time periods together and take the average to build that image and
+then this one is just like any random point in time and the reason why we're taking the average is so that we have
+like an estimate or like some some period of time we can compare all the other data points to to like figure out
+the um radial velocity with respect to this one specific point in time but like
+you can take any other point in time but this is just like a um like something to
+compare to and so um these two images while they are good images we can't
+really compare them yet because um open CV cannot detect the features on this
+this um because there's not enough contrast between each individual point because you can see that it's like uh
+it's a gradient so it's very hard to detect whether or not there are features
+so over here there's zero features detected however if we were to add a foreground mask we would be able to add
+the number of features detected using open Speed so um how we did the foreground mask is essentially um I
+added like lines to um to the image so you can here you can add lines um like
+randomly or you can add lines on like one or more prime numbers so like like
+every seven pixels you add line something like that and then um you can
+see that when you have um a gradient in terms of the Mask you get more features
+so for this you would have zero and then you have one and then so the more features the better um but I also didn't
+use random um masks because uh I wanted to stay consistent with my results so in
+the end I did not end up using random but um I still ended up using a foreground mask to increase the amount
+of features detected so after I added a foreground mask like one one or two features still isn't enough so I used um
+the scuti where essentially um now you make the lines much more um clear where
+essentially instead of having like a gradient you now have um like fixed
+number like fixed intervals which makes it a lot like a higher contrast you can
+say it's like a higher contrast and then so um as a result you can see that we
+went from Eight Features being detected to 46 features which was a huge increase and very helpful towards my project um
+something else that I did was um increased the contrast of the images you can see that over here it's like um it's
+there's like one like a small strip of Darkness but when you increase the contrast you can see that there's
+there's more dark area and um this is like forly known as histogram
+Equalization um which I did use open cv4 but it's essentially just increasing
+the cont and then so finally we question from the audience here if you don't mind
+um here in the zoom chat uh Ramsey would like to know did you work with any
+synthetic data for this project or was this all stuff captured from real life
+these are all real data sets um I we'll talk about this more I used four data
+sets from like the express um like Pipeline and so um yeah they're real
+data sets um and I will show the data later yeah awesome thanks yeah okay
+perfect thank you for the question so um next we do feature detection which was a
+like um it was a feature of open CV so I use
+that for my feature detection and then also this is also under open CV where
+you can calculate the homography transformation matrix and essentially calculate the RV shift so um when you're
+given the data points you can figure out
+the shift between the two points um using open CV and then you're going to
+get this Matrix and using this Matrix you can then calculate the shift in
+wavelength because you can match the number of pixel shift to the amount of shift in terms of like the wavelength
+and then then you can calculate the radial velocity all right so so now that
+we have the radial velocity for one point for one like point in time we can
+calculate the uh the radial velocity for all of
+our points and there are probably like hundreds of data points that we have and
+so when we plot this which will I will show later we can see that we can find
+some patterns which is very like very cool patterns that we can see
+um but the data sets yes so we have four real data sets from the express Stellar signals project and the reason why I
+chose these four data sets is because you can see over here we have um various
+Stellar activity going on so for example over here um the one I want to highlight
+is this one right here because um it's known to have one like Planet like one
+fromes confirmed Planet so it's very helpful when you want to like make sure
+that your model works because then you can compare this to the um the planet
+that you know like exists basically and so you have other data here um do you have a question no I was just going to
+pop in to say that HD 26965 looks awesome yeah yeah I I have it as my
+Planet yeah I have it as my title card and I have it as my end card because I
+like this image so much yeah and then all right okay so here is what happens
+when we plot the data and you can see that the radio velocity method or
+um the you can see that the method that I created in blue is very similar to the
+results from the express CBC Pipeline and so um and by the way the express CBC
+pipeline they're like the standard accepted results for the radio velocity
+of these exoplanets or not exoplanets these stars and so you can see that wow
+they're they're really similar but what does this mean because there's like there's a bunch of dots anyone can put a
+bunch of dots on a page but you can see that when we calculate the L Scargo periodogram we can see that the um
+computer vision method and the express pipeline results are are very similar
+and this is um a lot more like visually significant because you can see that
+each of the Peaks match up but it's also um significant in terms of the results
+because you can see that the Peaks that we have here are um like they line up
+very well and also they correspond to the same period so um we can basically
+see so what does this mean basically if you have these Peaks you can see that
+over here um I guess on this line this green line there are both we both have a
+peak here and essentially what this means for normalized power and like the
+height of the Peaks it's the probability that there's a false alarm
+or yeah and so you can see over here this line right here the false alarm probability is 1% but if you go higher
+than that and find the Orange Line the probability of it being a first false alarm is
+0.01 and so that means that the higher you go the more likely it is that
+there's going to be a period at this day so you can see that from 10 days to like
+an infinite number of days you can see that over here there are Peaks corresponding to like the periodicity of
+the Sun so or the star I mean and so essentially what this means is that as
+the star um like orbits or has like a period basically um there are going to
+be Peaks and then you can figure out what the period of the star is and these
+Peaks might not necessarily be attributed to exoplanets since there might be outside factors that go into
+the period of a sun but overall you can see that this is quite significant
+because you can see that in both my method and the express CBC um results
+there's a prominent Peak at 42.4 days which is like right here and
+that's very um notable because the star right here has a period of 42.4 days
+which is because of the orbit of the exoplanet so you can see that the
+results perfectly match up all right and so this is for the first data set um
+technically the second one on the previous slide but whatever this is our first data set that we've shown here and
+then we also have the results for the second data sets which are very similar as you can see the dots M line up and as
+well as the um long Scargo periodogram and then you can see here um it's still
+very similar and so what does this mean overall basically we found a very like
+robust and like um fast algorithm for
+extracting these radio velocities where essentially um the open CV algorithm can
+handle both clean and noisy data effectively and it's very robust and
+something else pretty notable about this method is that it's it's one of the fastest available methods since it can
+process data at one Fitz file per second and essentially a fits file is just the
+file um file name and then um and so
+it's it's very fast how many how many fits files would you uh
+normally have to process to to do this um so each like data point is a
+Fitz file so um essentially if you look here there are like hundreds of each of
+those dots is an individual file and that's how many you'd need to to process so it it it matters how fast this is is
+what you're saying yeah yeah because some I know some other methods they're like one fits file per minute or even
+like like more than that maybe nearing an hour so yeah it's a lot slower so one
+it'sit file per second it's like very fast and um it's overall a good
+sign all right so yeah so what does this mean so essentially um for detecting
+radio velocity we're using computer vision Ai and this is very helpful and
+it shows that we can use AI for future projects not just for detecting EXO
+planets and using our new method we found a close match which shows that
+this method using computer vision it H has like very high promise basically
+there's a lot of potential and um I'm very interested in exploring more and
+trying to test other parameters and see what else we can do to maybe like create
+a smaller um to have a smaller um like
+value that we extract and then so we can also see that we have a high level of
+robustness against um noise and diverse model settings so essentially like if we
+change some parameters the overall results won't vary um that much and it's
+it's fast and so what this means in terms of like real or like how we can
+apply this in real life it shows that we can use open CV and other like art AI
+Technologies for other discoveries in the future not just exop Planet but also
+other areas than astrophysics so I think it'll be really interesting to see in the future if anybody else uses open CV
+for um like astrophysics basically and more exop exploration so um basically
+beyond what I've done with the research and the project um in terms of results
+I've also um reached out with my project and I wanted to like um basically have
+other people also work on it because I think it has a high potential to really
+expand our knowledge of detecting exop Panet so to really like get this out
+there I've um of course I've um presented or like I've um uh posted the
+tutorial on haer and I participated in the open CV AI competition which is why
+I'm here and so you have the links there and I also
+um presented and published a paper at the i e MIT RTC conference and um it's
+on GitHub as well and I am always open to any um comments questions feedback so
+you can like find me using my email or with like haer and GitHub I will reply
+to the comments and I will see whatever you say and so so um I'm very interested
+in collaborating with any of you currently watching like in the zoom or
+on YouTube or whatever um basically if you want to collaborate with me on this project just shoot me an email um my
+email is on the screen first last and then 77@gmail.com and then
+um yeah so essentially what we can do in the future
+if you are interested is we can develop chunk by chunk mode um essentially what
+that means is that instead of having like individual um like like Peaks that we
+look at we look at like a chunk and we also want to figure out like what chunks
+are the best for detecting exoplanets because some CH chunks like some of them
+like maybe at the start or the end of the spectrum it's it has a lot of noise
+and thus is more inaccurate and less um helpful in terms of detecting exoplanets
+so that's also an option and then we can also optimize the algorithm um in terms
+of using open CV and the image processing and we can try to figure out
+more ways to detect features essentially and we can also test on more stars we
+can find a bigger data set and then we can also use computer vision or open CV
+for other purposes such as like pre-screening the raw measurement data to make sure that we we have or the data
+that we have is not as noisy or it it's like better for whatever we want to
+accomplish okay and then now um we're nearing the end I want to thank um all
+of these people um I want to thank my mentor um Dr Van uh Dr rash paa um I
+couldn't really have done it without him um and he provided me the data sets and
+all the the overall guidance for my research and also the Yale Express
+project because um they have the data and they provided very positive feedback
+and of course what I am here for today open CV um because they were able to
+provide the open- source CV library that I was able to like create my project
+with and also they um gave me great opportunities um and um were able to
+like recognize and promote my research finding so I'm very grateful for all these people who have supported me along
+the way and that's it we can detect exoplanets together and I hope um you can send me an email and perhaps we can
+collaborate thank you tremendous thank you so much Caitlyn
+um awesome awesome presentation I think one of the best we've had in in quite some time uh you can go ahead and
+unshare your screen there all right thank you thanks so much um much much to
+consider uh such a just awesome awesome project we've got a lot of folks in the
+in the chat here interested in potentially uh collaborating as well Stephen in the chat says this is one of
+the best talks we I've seen on open CV yet so thanks so much we got we've got a
+decent amount of questions vasu also says a very nice presentation over on YouTube we've got a few other people uh
+saying uh thanks so much um we've got a couple of questions here uh first of all
+um so as a as a student I mean normally when we have students on here they're
+college students but uh as a as a student
+um what do you think is was like the most beneficial to you about um
+participating in open CV AI competition 2023 I think the most beneficial thing
+is just like the Outreach that it was able to give me and also it helped me
+like really try to make my project a lot more clearer like um I essentially like
+when I went into this I really didn't think that I was going to win I just thought like a great opportunity for me
+to like get my project out there and like share it with more people and then I did win and then it was like an
+incredible shock and I'm like really grateful for that and as a result of that it was able to help me like explore
+open CV more and also like be able to share with more people basically awesome yeah and thanks so
+much to our our sponsors at hater cotus and Seed Studio for that um folks there will be a open CV AI competition 2024 um
+we've got a couple sponsors lined up already the best way to stay a breast of that situation is to sign up for the
+open CV newsletter that'll be the first place that we um uh announce that when it comes out um couple more questions
+here uh so what did did you look at any other data sets um aside from the express ones
+or were those really the only ones that were viable for this kind of research yeah so I mostly looked at the
+express data sets I used the the four that were um given to me by my mentor um
+Al I am open to using more data sets but these were the four main ones that I focused on for my
+project makes sense to me um we've got a few people asking about uh like you know
+machine learning or uh like recurrent neural Nets or uh long short-term memory
+networks uh did you look at any kind of machine learning uh tools for this
+project and are you uh if if not or if so are you looking at maybe integrating
+them into the project in the future yeah I think that's a really good question um for my project I focused
+mainly on using computer vision to um basically extract these radio velocities
+but in the future I'm definitely interested in looking at other types of machine learning I think that it will
+definitely help expand um how far my project can go and so I'm definitely interested in learning more about these
+machine learning techniques awesome uh well said as always I got to say having you having
+had you on the show here I am so impressed with how well you're able to talk about this stuff um you uh you have
+a you obviously understand it and you're very good at communicating this I think we've had uh a lot of people on the show
+who are you know professionals out there that are not nearly as as good at this and so uh we're really looking forward
+to to watching your career uh develop and hopefully have you back on the show with some even more exciting stuff um
+I'm going to take this moment to do our trivia giveaway so everybody who's been watching out there and waiting patiently
+now is your chance um I am going to ask ask a trivia question based on the
+presentation from our illustrious guest the first person to answer that question
+correctly in the zoom chat and if you're not in Zoom you can get there by going to open cv. Live you've got a few
+seconds to do so the first person to answer it correctly in the zoom chat will win the opencv course of their
+choosing you can see what courses are available by going to open cv. orgun
+University and before I ask I'm going to share my screen again quickly here on the open CV University front there is
+some pretty big news today there is a uh new version of our deep learning with
+pytorch course this is for pytorch 2 um released by meta fairly recently the
+course has been fully updated to take advantage of the new stuff available in the new versions of pytorch and with
+this new launch we have a special deal for everybody out there in the open CV Community there is a 50% off
+discount excuse me uh that discount was so steep I couldn't believe it um there
+is a there is a big discount if you go to open cv. University right now for the
+next one day and 15 hours you can get up to 50% off of the deep learning with
+pytorch course so please check that out um get ready to answer the question now
+if you have won in the last few months please do not answer and give someone else a chance to win out there in the
+chat so we talked about a lot of interesting math and science stuff here today um one
+of the things we talked about had a pretty interesting name it's a method frequently used in Time series analysis
+to identify period periodicities and determine the frequency content of unevenly sampled data everyone out there
+in the chat what is the name of that method what is the name of that
+method I thought I got you but it looks like Joseph was paying attention uh you're you're pretty close there
+buddy um it is not radial velocity no that would have been too easy I'm on to
+you we'll give we'll give folks another another few seconds
+here before I think we'll we'll give this one to to Joseph donlin Joseph donlin the uh phrase was L scargle LOM
+scargle um had not heard that one before sounds like a like a football player from the 1920s Bronco nersi and Lam
+scargle used to used to throw down together um congratulations Joseph Joseph please send exactly one email to
+Phil atop cv. org that's me and I will make sure that you get the course that you want you can see what courses are
+available by going to open cv. orgun University pick one send me an email the awesome opencv courses support team will
+make sure that you get access to it right away so congrats Joseph uh we've got a few other questions here
+um someone here in Zoom would like to know more about these fits files uh like
+what kind of data is in each of these files is it like uh just like some kind
+of array of of of numbers like what what kind of info is in a Fitz file yeah so a
+Fitz file actually has a lot of information so it's like the standard file that um people use for astronomy
+and there's a lot of like data within it but the main one that I used was the the
+wavelength and um like
+the uh in specific like the berry wavelength which is where it's like the wavelength
+but adjusted a little bit because of the like this Earth orbiting the Sun it's
+like the Earth also moves so that's why you need adjust it but basically like there's other information that I didn't
+use um but it also talks about like um
+uh uh there's it also has like the data separated in terms of chunks so there's
+like um 86 different orders and essentially each order is like a chunk
+of the wavelength um I didn't use all the orders because um the ones at the end are very noisy so I narrowed it down
+to like the middle like 40 or so so yeah yeah that that makes sense to me um
+I I'd never seen these files either so I was kind of interested in what that might be um we are uh we got about 10 minutes
+left here a few more ask a few more questions um I'm going to take this opportunity to remind people that um if
+you've made something with open CV recently or just seen something cool that uses open CV send it to us uh
+there's a publicly accessible form here where you can send us your cool open CV project or if you just stumbled upon
+something on the Internet maybe you found it on Reddit or LinkedIn or Tik Tok or whatever um send it our way and
+it uh will consider it for inclusion in both the open CV Community Friday newsletter where we highlight cool
+projects from the community and if it's interesting enough maybe you'll end up on open CV live here like our uh
+esteemed guest Caitlyn um there's also the uh as I mentioned earlier the best
+way to stay up to date on open CV news and information is by signing up for the opencv newsletter you can go to open
+cv. newsletter to sign up for that there's a lot of benefits to doing so you'll be the first person to find out
+when new courses launch and get the discount codes for those also other opencv projects we give special
+discounts to open CV subscribers because uh it really means a lot to us that you
+invite us into your email boxes every week um all 92,000 of you on the opencv
+newsletter these days um thanks so much for that uh also importantly Google summer
+of code contributor applications are open until a April 2nd at 1800
+UTC open CV has participated in Google summer of code for several uh of the the
+most recent years um Google has been very kind in in helping us with this this program and and giving us these
+resources um if you have something you want to work on with open CV or uh just
+want to see what's available out there and want to be a contributor you can go to someof
+code.google.com register to become a contributor uh pop into the open CV forum and and talk with the mentors this
+year and and and see what uh maybe you can come up with something interesting to build we encourage everybody um if
+you're a student out there uh please uh contribute uh you know sign up to be a contributor for Google summer code even
+if you don't end up working with open CV there might be some other projects that you find interesting for example another
+open CV project cat the computer vision annotation tool is also contributing in
+Google summer of code this year so uh thanks a lot Google we're looking uh forward to what comes out of this in in
+previous years there have been a lot of great additions and uh uh optimizations
+made to open CV through this program and we hope that that Trend continues this
+year as we uh March toward open CV 5 which again you can stay up to date on
+by going to the open CV workboard and checking out the opencv 5 progress
+updates which will be on the open cv. org blog every Wednesday
+afternoon um open CV is a uh
+nonprofit open CV is an open source Library uh we are both of these things
+which means that we are supported by viewers like you in addition to the organizations that become open CV
+members um if you are an individual out there and you want to support opencv financially you can do so by going to
+open cv. orgs support and donating via stripe or PayPal we've also got a member
+organization program which uh many of you uh watching the show may be may be
+members of already I will uh pop open the web uh the homepage here these are
+our current members and partners thanks so much to all of them the most recent is run. we've got um you'll notice a few
+new ones here that we haven't really talked about much um but we will be talking about soon thanks so much to all
+of our open CV members for helping keep the library alive supporting the community and uh supporting publicly
+available uh open-source freely licensed computer vision if your organization
+uses open CV and you want to support open CV at an organizational level and become a bronze silver or gold member
+you can do that by emailing us on this page as well um bronze is $6,000 a year
+you get a lot of perks as a courtesy for being an open CV member organization in addition to having your logo on the
+website you'll also be featured at our various trade shows open CV will be at cvpr in Seattle this year um as well as
+uh you know being able to engage with the opencv community directly via our newsletters via the open CV live
+webinars like we're doing today and all of the other stuff we do with the open CV community so please consider that if
+your company benefits from open CV in any way we appreciate all of you out there who uh support us even if you
+can't support us if you're a part of the open CV Community you're a part of the community and we uh we love all of you
+um you can also sponsor opencv on GitHub you can go to github.com
+sponsors opencv and for $9 a month you get your uh sponsor you get your name
+listed here on the current sponsors list thanks so much to all nine of the current sponsors here I'll briefly Mouse
+over each of their little icons so they can get their moment of Fame here on the open CV
+webinar um thanks we we really really do appreciate it and uh yeah I think that's the those are the
+main those are the main ways you can support open CV right now of course if you you can also become a volunteer if
+you're a student or a professional or just someone with a lot of time on their hands that knows a lot about computer
+vision you can go to uh another form here fill it out to become an open CV
+volunteer we're looking for folks to do stuff like uh run open CV groups at their schools um help us improve
+documentation help us uh boost and promote things on social media uh as well as
+participating you know more more deeply in the community on GitHub and perhaps even looking at you know pull requests
+helping with with all of that kind of stuff uh if you're out there uh have a have a look at the open CV volunteer
+form and and join us and maybe make something cool together
+um that is about it with that I think uhh someone is asking Caitlyn do you
+have a LinkedIn account oh I do have LinkedIn okay so if you another another
+way if they want to uh professionally collaborate um we drop those links send
+it yeah should I send it in the chat now yeah go ahead um we'll also drop those
+links in the show notes for everybody watching out there after after show day
+um any any final thoughts uh for the audience Caitlyn you thanks so much for
+this awesome presentation this is uh already one of my favorite episodes no thank you for having me on
+this show I'm really grateful that um I was able to participate in this competition and
+and ultimately do very well so thank you so much yes the pleasure has been all
+ours and thanks so much to you out there in the open CV Community we wouldn't be doing these shows if you didn't watch
+them and share them with your friends uh thanks so much for joining us on this Thursday like so many of you do every
+Thursday morning congratulations to our trivia winner um next week Our Guest
+will be quaba aumen of uh open MV the open camera uh manufacturer there's been
+a lot of interesting stuff going on in the world of open MV recently and we're looking forward to getting the update on
+that Open Source Hardware and software um really looking forward to talking with quab he's been on the show a couple
+of times he's actually lives in my neighborhood and somehow for some reason we never see each other unless we're doing a show like this so it will be
+good to catch up with quaba um we hope you'll join us for that um and then the
+the week after that we have Bart Bart T
+I'm not going to try to pronounce his amazing polish last name but you'll remember him from uh building Sports 2.0
+an episode that we had a while ago as well as participating in a previous version of the open CV AI competition
+where he made a really awesome laser tag uh VR type of thing using open CV AI kit
+uh so look forward to that Thursday morning 9:00 a.m. same bat Time same bat
+Channel take care of yourselves out there folks and take care of somebody else if you can have a great day
+wherever you may be yes and for my LinkedIn um I don't
+know how to like send the link for it so just search up my name it's Caitlyn Gan and then um it should I I don't think
+need with name Caitlyn Gan but if there are my profile pictur exact same as the one on the like um on the poster that's
+where I got it from yeah on the poster yeah yeah all right uh thanks so much we'll see you later folks adios thank
+you

@@ -1,0 +1,5 @@
+so we talked about a lot of interesting math and science stuff here today um one
+of the things we talked about had a pretty interesting name it's a method frequently used in Time series analysis
+to identify period periodicities and determine the frequency content of unevenly sampled data everyone out there
+in the chat what is the name of that method what is the name of that
+method

@@ -11,7 +11,8 @@ encoding = tiktoken.get_encoding("cl100k_base")
 # print(sample_tokens)
 
 # read context 
-context_filepath  = './samples/opencv_live_episode_123/context.txt' 
+episode = 127
+context_filepath  = f'./samples/opencv_live_episode_{episode}/context.txt' 
 with open(context_filepath) as fh : 
     input_context = fh.read()
 

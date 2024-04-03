@@ -3,13 +3,18 @@
 from openai import OpenAI
 from dotenv import load_dotenv, find_dotenv
 import os
+import re 
 
 def find_answer(input_context, question, openai_api_key):
     # set client
     client = OpenAI(api_key=openai_api_key)
 
+    # basic preprocessing (removing multiple consecutive whitespaces with single space)
+    input_context = re.sub(r"\s+", " ", input_context)
+    question = re.sub(r"\s+", " ", question)
+
     # Define conversion prompt
-    prompt = f"Answer the following question delimited by triple backticks based on provided context also delimited by triple backticks.\n\nQuestion - ```{question}```\n\nContext - ```{input_context}```"
+    prompt = f"Answer the below question(delimited by triple backticks) using the following context (also delimited by triple backticks). Answer the question, not looking for completing the context.\n\nQuestion - ```{question}```\n\nContext - ```{input_context}```"
     print("Prompt:")
     print(prompt)
     print("="*100)
@@ -42,8 +47,10 @@ if (len(openai_api_key.strip()) == 0) :
     exit()
 
 # define parameters 
-context_filepath  = './samples/opencv_live_episode_123/context.txt' # shortened_context.txt
-question_filepath = './samples/opencv_live_episode_123/question.txt'   
+episode = '127'
+question_idx='1' # use '' empty string if only 1 ques asked in the episode
+context_filepath  = f'./samples/opencv_live_episode_{episode}/context.txt' # shortened_context.txt
+question_filepath = f'./samples/opencv_live_episode_{episode}/question{question_idx}.txt'   
 
 # read context 
 with open(context_filepath) as fh : 

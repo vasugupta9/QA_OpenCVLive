@@ -1,0 +1,773 @@
+bear Wier Christian fob Albert Baldwin thanks so much for
+joining us so quick um as you join us wherever you're joining us from please
+let us know in the chat system wherever you're watching where you're joining from I am coming to you from beautiful
+downtown San Francisco California and our stalwart host Dr SAA Malik is coming
+to us from from San Diego California and our illustrious guest
+mortaza Hassan where are you coming to us from coming from laor Pakistan right
+on I see uh Steve from Toronto how you doing Steve another San Franciscan night
+here good hello Maine hello
+India hello Pakistan hello Ukraine hello
+Mexico the people who are uh writing on the uh on the chat please uh move please
+uh you know respond to everybody so that uh everybody here gets to know where you're joining from yeah there's a if
+you're watching in Zoom there's a little checkbox or a drop down to everyone or Two Hosts and panelists make sure that's
+set to everyone that'll make sure everybody sees where you coming from we got uh Romania Texas
+Colorado yes yes yes love to see it folks
+good morning to the 10 of you watching on YouTube the three of you watching on Twitter and the 50 of you watching on
+LinkedIn so far and the the 42 of you here in
+Zoom got a little bit of stuff to talk about at the top of the show here just a few minutes but this is going to be
+really exciting one we're going to talk about the future of drones and AI with um you know one of the one of the the
+experts in the field definitely a YouTube channel that I subscribe to so it's always good when we have people on
+the show that I actually follow you know before they're on the show I always enjoy
+that hello Los Angeles Yokohama Arizona Nigeria the moon I don't believe
+you um Colorado again more San Francisco
+the United Kingdom yes indeed
+all right boss I think it's about time to get started you ready yeah let's get started hello everyone welcome to opencv
+live I'm Dr Sacha Malik and I'm the CEO of open cv. org Our Guest this week is
+moraza Hassan an educator and YouTube entrepreneur in the field of computer vision and Robotics you may best know
+him from his YouTube channel M's Workshop that has over over 390,000
+subscribers M has deep experience in computer vision Robotics and Ai and we
+are so excited to hear what he has to say on the future of drones and AI but
+before we start the presentation with me always is opencv's director of content
+and creative Phil Nelson he organizes this show and if anything goes wrong it's his fault that's right it's all
+about the boom I am your Co co-host with the coost the second banana who is second to none I'm also your plus one and only it's Mr Nelson if you're nasty
+but you my dear friends can call me Phil and I'm here to remind you of a few things we do on every single episode of
+this show the first of which is a giveaway to you in the audience later on in the episode Our Guest has generously
+uh decided to give us three of their drone courses to give away so stay tuned later in the episode you will have three
+chances to win today thanks to our generous guest we're also taking
+questions from you in the audience and we will do our best to answer them directly use the zoom Q&A button at the
+bottom of the screen to ask your question at any time if you're watching on Zoom or use the chat system wherever
+you're watching I'm monitoring those and I'll try to get to your question during the show back to you
+SAA well so um I mean welcome mza and uh I'm pretty certain that a lot of people
+in the audience already follow your uh YouTube channel and they would be very excited to hear uh from you so uh let's
+let's get started I mean uh we have had people talk about drones uh you know we
+have had people from the Drone foundation and uh it's it's it's great
+that way but uh this is where you know uh the rubber meets the road right you
+are going to show us about how to get started with drone programming Etc and we are going to be you know that that's
+a very exciting field for some somebody who's not uh who doesn't know where to start right so welcome uh to the show uh
+you can start by a little introduction if we missed out uh something and then we'll uh we'll go with the slides
+welcome thank you very much thank you very much uh it's an honor to be here thank you very much Dr Satya and
+Phil I'm having a little bit of a sore throat so you please bear with me uh
+hopefully it will get better as we go along so today we are going to speak
+about the the future of drones and how Ai and drone will be getting together
+and it will lead us into the future but before we do that uh is it possible to do a poll um can we yeah we can do a
+poll well we've never actually done you want to pull okay so I have a I have a simple
+question uh there's a concept that if you have two eyes then you can easily do
+depth perception which means that you can tell how far an object is now the question comes that if
+I close my one eye or let's say if if a person is blind from one eye should they
+be able to drive or not should should it should they get a driver's license or not that's the
+question all right I'm posting it now so a simple yes and no would do I
+guess yeah so so the question I will repeat again
+will a person who does not see from one eye has only one eye to see from should
+they be allowed a driver's license given that depth perception is
+perceived using two eyes so I know our our hosts they are
+they know the answer they don't want to say it right or they do want to say it well we will after after the poll is
+over right most of the people appear to be saying yes uh because um I I see
+almost two to one uh yeses more yeses one okay 11 12 13 it's more than that
+actually it's like three quarters yeses like three quter yeses I see some people
+mentioning time of flight already so right pretty good time of flight yeah
+not sure where that's coming from but we'll find out we'll find out it seems like everyone's saying yes everyone is
+saying yes so that is actually right because you don't sorry you don't
+actually need two eyes to do depth perception you can do it from one eye as well so this means that uh I can tell
+how far an object is even when my eyes are clo uh one of my eyes are closed so
+um the the question really is especially when it comes to computer vision the
+question is the software because we don't need eight cameras or we don't
+need 10 cameras on our car sorry we just need one camera to
+actually do all the processing the main thing is the software behind it so if we
+have a good enough software in theory we should be able to have our self-driving
+car right U just to add does that sense yeah so just to add to it first of all
+uh depth perception is obviously better with two eyes but you don't need two eyes for depth perception because depth
+is there are many cues first of all uh people who have one eye they estimate
+depth using depth from Focus right uh and it is not just one uh Q right you
+don't need two eyes the the amount of focus the amount of effort it it takes to focus on something gives you an
+estimate of the depth um but it's also through experience right all the AI models they don't have this uh focusing
+mechanism right because they are looking at a picture only they don't have a mechanism to change the focal length
+right like we do with our eyes when we change the Focus right but they learn from experience right that this uh this
+cup that is in front of me it is at such and such distance and therefore you can
+actually uh estimate the depth if it is not being fooled you can easily fool
+with a single image you can feel an fool an AI model you know everything can be scaled you can have a tiny house a tiny
+car and everything and then you don't know uh what is the uh Act height it would think that Force
+perspective is yeah that's definitely a fun trick also their other senses as well will
+will you know sound and and even smell right you can tell if something's close to you if you can smell it or not right
+like it's it's just kind of that sort of thing yeah but the same thing goes for humans as well like we could be fooled
+as well with image right if the house is big or small yeah it's easy to that's a
+fundamental ambigu that's FAL amby uh there is no way to tell scale from a
+single image but if you're in a traffic environment obviously and you're not trying to fool the system actively then
+that's a different thing right then you can estimate exactly yeah okay great so
+let's begin with our presentation um can everyone see the
+presentation yeah looks good shout out to the 140 viewers on LinkedIn right now
+and the 80 of them here in zoom we're we're crossing we're getting close to the 300 barrier here hooray oh great so
+can we welcome everyone welcome can we pin the presentation so uh moraza is I
+mean definitely you got it there you
+go well so it doesn't show up on mine um but people who are watching if you could
+go and pin the uh Mora's uh window uh I I think for uh each one of you you'll
+have to do it individually you will be able to see a big screen oh okay so I guess when I speak
+they will be able to see no no it's it's fine I think uh right now uh if how
+about that I hit I hit Spotlight there's two ways to do it there's pin and Spotlight Spotlight might have done it
+okay okay I hope everyone can see now now it's good now I don't need to okay
+good all right so don't look at the do uh I guess everybody is too late too
+late I failed already too late okay so today we will be talking about the future of AI and
+drones so uh let's start with a video of Mark Rober now you will not be able to
+hear this but let me actually remove the
+audio because I can hear it too loud so you won't be able to hear it but
+I will explain what exactly is happening and what they are saying so I hope
+everyone knows Mark Rober he's one of the biggest YouTubers out there and he does a lot with science and technology
+so he's basically demonstrating that there is a company that actually delivers these packages directly to your
+home with a dart Precision so the similar way you throw a DOT and there's
+accuracy that accuracy is replicated here with these drones so surely if Mark
+Rober is saying that this is the future of drones then definitely it should be
+right and if we see that there's a lot of companies that are putting a lot of
+money and effort in developing these drones so we have DHL we have UPS FedEx
+Amazon so a lot of big num uh names are actually putting their efforts to
+Walmart well has like some inhouse tech they're working on the the world's largest retailer Walmart yes exactly
+they do have it as well so one might think that okay uh Mark Rober is saying
+a lot of companies are saying then definitely this is the future of drones and this is where we are head it
+right actually that's not true uh at least in my opinion you see uh DHL and
+Amazon are one of the biggest players in this game and recently DHL completely
+shut down their drone facility after eight years of research and Amazon is
+basically in a decline and a lot of rumors are there that their staff
+actually doesn't work on the drones they just sit and enjoy time I'm not sure if
+that is correct or wrong so but but there are reports of that so now the
+question comes allegedly allegedly we don't want to get Su over here yes allegedly so so the question comes that
+in in in the beginning I'm saying the future of AI drones and uh we are
+talking about the future of drones and then on the first slide I'm showing you something that it is a decline and
+people are actually shutting down one of the biggest players are shutting down so what exactly is happening here right so
+it's it's um contradicting so I will give you the answer by the end of the slide so what
+we will do is we will go step by step and try to understand along the way what actually is happening throughout uh
+right now so uh I don't want to just give raw information of this is what this is doing this is this company doing
+this I mean that's okay but that's only news so what we'll do is we'll start with a brief story and then I will share
+a road map to learning AI because nowadays A lot of people they talk about
+AI but when you ask them they don't know where to begin so I'm I'm going to give you a a small road map which you can
+start right away and it will be completely free then uh we will discuss
+about what are the basics of drones and then we will look at how exactly can you
+program a small drone then we will look into the Futures uh future of drone and
+the last thing is a secret video that I will unveil at the end of this
+webinar love it we love we love sec secret
+okay so far so good right okay so we will begin with the story so the story
+is actually of myself uh I would like to share this story because it is very crucial to my journey in computer vision
+see what happened was that I was back uh this was back in 2012 uh I was in my University studying
+my bachelor's degree in mechatronics a lot of people ask where did I study it was in university of Norland
+uh their Malaysia campus so I was studying back then and somebody told me or I came across this
+information that images are made up of boxes and these boxes they contain some
+numbers inside them now this was the first that I was hearing this and when I
+heard this I I was surprised I was shocked and I was intrigued as well that
+I want to see this in action so what I did was I went on uh to my my computer I
+zoomed in in a picture and while I could see some boxes there I didn't see any
+numbers so I went online I researched how how can I do that and there was a
+software uh you probably know Matlab which had a graphical interface which allowed you to zoom in until you saw the
+numbers and that's what I did so I went to mat lab I went to the university lab
+and I zoomed in and there I saw the numbers and that was the first time I
+understood images right so that was really fascinating for me because I
+could really understand the concept behind 30p 40p or 720 because back then
+it wasn't I think HD so we had uh these um resolutions on YouTube I understood
+how these images work what are the colors of these what is grayscale and all of that just because of that uh
+viewing of this pixel with numbers so then what I did I got really
+fascinated with this and I said I'm going to do a computer vision project my final year project has to be related to
+computer vision so I started working on it uh I created a robot arm uh this is
+the complete video back then I used to make videos as well but I never posted them uh so this was the graphical
+interface of Matlab and uh this was the uh what do you call the the open CV uh
+no back then I didn't use open CV this was the color classification basically red blue and
+green uh in mat lab yeah they had this uh library that helped you and all of
+that and here you can see the result now the reason I'm sharing the
+story is because I myself got inspired from another content creator uh his name
+is sendex well his channel is sendex his name is uh I believe uh Harrison
+Kenley right so uh it's a difficult name that's why and his YouTube channel is
+actually synex so it's difficult to remember his name a little bit so
+anyways so I got inspired from his story and that's why I'm sharing my story as well that in hopes that anyone could
+maybe start their computer vision Journey after this so that was the basic idea start finish how much how much uh
+time did you spend to get this thing working uh six months or uh this took me
+around three months uh I actually did it before the semester started and I
+pitched it as a final year project I had already done it because I was so uh you
+know intrigued I wanted to create it and I had half of it was already done you
+know the hardware part and the software part and then I had to do just the written part so most of the time the
+last year I spent my uh helping my friends do their financial projects instead of when I was in school I would
+I would do a similar trick which is find out from the teacher uh what the reading was going to be and then just read all
+the books at the beginning of the year yeah that was M it it helps a lot
+yeah so uh anyways fast forward uh 2019
+I started my YouTube channel uh between that I did a lot of uh different experiments with computer vision I used
+to teach uh as a lecturer in one of the universities we used to go for different
+robotics competitions and over there I was introduced to drone programming and we had competitions who can run the
+fastest drone uh around a path who can run a robot around a path who can solve
+the maze fastest so we participate in a lot of different competitions and that really gave me um a lot of experience in
+terms of these uh Technologies especially within open CV now uh then I thought okay I will put
+all of this together and start a YouTube channel and again in 2019 I started this
+and I got a little bit greedy after three four months so I I saw some traction I saw that maybe around a,
+1,5 100 people have joined in so I said I want more subscribers so that that
+became my focus so what I did was I said I will sit down and try to find one
+keyword which basically uh has something to do with all of my videos right one
+keyword that defines my complete channel so this was the image that I
+actually I saw back then and these are the number of videos I had back then so
+when I saw this and I examined each one of these the only thing that I came up with was open CV right so that was was
+the only keyword I could find that was directly related to my channel so here I
+would definitely like to thank open CV for creating such an amazing library and
+making it free because if I were the one making open CV I might not have made it
+free right I might have got greedy this this credit the credit goes to Gary
+bradsky actually who's the founder of open CV forite 20 years back to uh to make it
+open source and you know uh get it running for all these years so definitely a big thanks to him and all
+the contributors as well who have made this possible over the years so once I
+found out that this is my keyword I said okay I will go to YouTube and that's
+what I did I searched online for open CV and I I was shocked to see this it
+was similar image that I saw that none of the videos that came up were actual
+videos so all of these were actually uh playlists so I said to myself why don't
+we have a single course with some projects in it and maybe that will be
+something that will hit off right uh take off so that's what I did I created this
+learn open CV in three hours and I had nine chapters before so these were the
+the blue ones these were the chapters I put them together along with three projects and it took off so it actually
+got uh till now it has gotten 3 million plus views so this basically tells you
+the trend of what people want right so this was I I call this a loophole that
+you need to find a loophole and then you can move on and create something towards
+that because that is what people want if you're is getting more views this means
+that is what the people want yeah so I tried many different yeah I so one of
+the things that it's not very obvious right you have to experiment with some of these formats because you had a
+three-hour video yes and exactly you know if somebody had told me um uh that
+okay three years four years back that oh three hour videos will be very uh you
+know will get 3.1 million views I would have uh just disregarded that right
+because 3 hours is a long time right it's a long and but but that is
+precisely why you got this these views because it was you know you covered quite a lot in those three uh hours
+right so it's it's about the timing as well yeah that if you get in at the right time with the right content but
+the question comes why am I telling you all of this why exactly are we discussing uh this um loopholes and
+strategies because that actually tells you where the world is headed what exactly is the trend what people
+actually want and because that is something that will go we are talking
+about the future so that is something that will be carried on in the future so
+after this what I did I tried a lot of different things I tried to find a lot of loopholes to see where the trend goes
+and how people react to that and one of the videos that got even more successful than this was the Drone programming
+course so I I did not actually anticipate this I thought maybe it will
+be difficult for people to get the hardware uh it will be difficult to connect there will be a lot of issues
+here and there but uh I had something that uh I had experience with that so I
+thought why not make a course and upload it but when I see this when I saw the success of this I I truly got inspired
+and right away I created another course related to to um drone programming as well and that got a hit as well so
+people really enjoy drone programming not just because it is um something you
+can Implement in the real world but because it is very good for Education as well a lot of the times when you are
+learning programming it becomes a bit dry so if you have something physical
+with it like nowadays we have blockly that lets you play with games and create these games then it becom comes very
+Innovative and it it becomes very um you would say it's it's about instant
+gratification so if you can see something happening from your effort
+then you get motivated so that's the basic idea if you can shorten that time
+like shorten the time from when you do something to seeing you know the results see the that's how you get people really
+engaged yeah engaged exactly so that was the idea that's why this course was so
+successful that's why people love doing hardware and software together because
+it makes it a fun activity and later on I will show you as well that now even
+there are complete institutes that are just teaching drone programming because it is so good for kids to get started
+with programming using drones so we will share that later as well so after this
+um I tried a lot of different things um a lot of different videos a lot of courses uh some of them worked some of
+the courses didn't work as well for example the arino course or the C++ open CV or the face attendance worked really
+well other courses like the interactive map course or the anti-spoofing didn't
+work as well so this basically tells me where the the world is headed what
+people actually want so that's why we focus more on that so coming back to
+today now I see a loophole again so I see two loopholes one is the AI course
+and the other one is the Drone programming with AI and the reason I say
+this is because there's a lot of AI courses out there but the problem is they focus mostly on the mathematical
+side the neural Nets how to actually uh create the AI but now ai is not about
+creating it's about using it's about putting it to the daily task so that it
+helps you as an assistant so when I created my first AI it was back in
+2013 it was all about creating so um you you use the neural Nets you create a
+face recognition model face detection model and so on but now you don't have to create the model you have to get the
+model for example chat GPT or even some of the free ones like Llama Or Mistral
+you can get those AI models and you can utilize them to your benefit so that's
+what this course uh or or I would say that is what was missing at least that's
+what I felt so five days ago we actually launched a course which is AI for
+everyone which will teach you complete from the very start in fact if I have no
+I don't have it here uh I have a complete checklist of what exactly is in the course and you can check it out as
+you go along and of course it is free it's on YouTube and the other one is um AI drone coding that I will discuss
+later on we are going to launch it on Kickstarter um after a few days so this
+is the checklist of that course now this is the road map to learning AI so
+basically first you will start with the introduction we spent a lot of time creating animations to explain what
+exactly is AI to someone who has no knowledge of AI whatsoever so there's
+introdu introduction to Ai and we discuss some of the common terms that are used in the AI industry we talk
+about prompt engineering how effectively you can talk with AI because if you
+can't explain what you need you will not get what you want right uh it's called
+garbage in garbage out so if what you tell is garbage you are going to get
+garbage out then uh we discuss about CP true in many fields whether you're you're cooking or building drones
+garbage in garbage out garbage out exactly so then we have a discussion of
+CPU GPU online offline how to install and there's a complete section of how
+you can do this without coding so you don't have to code you can do it without coding as well but of course when you
+are coding we have a section for that we have a graphical interface how do you create these and then we have 15 apps um
+some of them include the a caption generator you send in a uh image it will generate a caption for you then we have
+an adult content uh detector it would tell you if the image that you uploaded is appropriate or not we have background
+remover PDF sorters lots of different apps to get you started up and running with the AI field of course this joke
+sorry I have this joke that if you really want to that adult content uh technology to take off you should build
+a categorization answer off I'm just kidding that was a joke
+that I had okay it's a true it's true so yeah
+um so there's all also the training part where you will be able to train your own
+model as well and then how do you deploy it so that you can give access to people
+and all of that is covered and these are some of the stats we launched it 5 days ago we have over for 2,000 enrollments
+again it's free there's no charge and the course rating so far is 99.7%
+positive total time it's 12-hour course I know it's a bit lengthy like you were
+saying three hour courses are lengthy but now we have 12 hour courses right so
+it's a single video uh 12 hours yes it's a single video 12 hours with all the
+categorization everything within a single video nice so but of course we have categor CHS that used to be a lot
+uh but nowadays on YouTube I mean I watched a three and a half hour review about the video game Doom from Tim
+Rogers like that's totally normal nowadays yeah yeah that happens and and I've seen
+um a live session of 12 hours I I don't know how people go through 12 hours of
+Life yeah they going for a record holy cow man I'm not sure and the watch time so far in these
+five days is about 1,800 which is equivalent to watching uh about 900
+movies right so that's a lot and people are inside inside
+baseball on YouTube uh if I can put in for a second that you know to in order to become a YouTube Partner you need um
+I think 3,000 watch hours is that is that what it is per per year so like that one video that one video basically
+got you more than halfway if you weren't already a partner yeah that's wild yeah yeah that's true so uh these
+are some of the users uploading their um progress so this is the checklist you
+just stick it uh as you move along and there is one person who has completed the course as well in five days I I
+don't know how they did it they said they will repeat it again I guess they binge watched it and then they want to
+try it with the coding part uh that's the idea anyways so our Kickstarter uh
+will be 50% off for our AI drone course but we will discuss that later on let's
+talk about what exactly is a drone so we get a little bit of perspective of what exactly we're talking about and then we
+will move on to where the future is headed because in the beginning we discussed that Amazon has shut down and
+um not Amazon DHL has shut down and Amazon is pretty much on the way of
+shutting down allegedly right allegedly
+okay so what exactly is a drone a drone by definition if you look at that it's a
+continuously low humming sound which is a weird thing to say but that is what it
+is that's where we are a very popular genre of music among programmers in
+fact yes that's true a real thing shout out to S FM for the drone zone Channel
+go check that out s FM Som FM okay so uh
+yeah yeah so what exactly is a drone we have um a flying unarmed vehicle that is
+basically flying and we have lots of different types of these right now we
+have uh a few listings here we have a quadcopter we have a hexacopter and
+octocopter if you have done High School maths pretty much you can tell why these are named this way this has four
+propellers this has uh six and this has eight so that's the basic idea
+of this so then we will move on to what exactly are the components of a drone so
+we have frame we have Motors we have propellers ESC flight controller battery
+receiver and all of these so what we will do is we will look into these very briefly and then we'll move on to the
+coding part so the frame itself is what holds everything together it can be of
+carbon fiber wood or even 3D printed but the most successful one so far is the
+carbon fiber because it is quite sturdy and it is lightweight and less likely to
+bend over time as well there's there's many um many benefits it's also unfortunately considerably more
+expensive than wood orive a lot of these uh squash rackets and tennis rackets they are now made
+with uh this carbon fiber because earlier they used to make it with wood that was very difficult earlier I mean
+like maybe 1960s 70s not recently but now they make it with uh
+carbon fiber anyways moving on we have Motors so we have brushed motors and brushless motors brush motors are cheap
+you can find it in cheap drones brushless they are more expensive they use AC signal instead of DC and they
+have a better weight to power ratio it means that um you will have better
+efficiency overall when you're using presses that's why most drones they use presses
+Motors then we have propellers propellers two of them they will move in One Direction and the other two will
+move in the opposite direction and this is because they will cancel each other out if all of them were moving in the
+same direction then the Drone would actually start rotating in that direction so that's not what we want
+right uh then we have electric motor controller ESC uh this is what gives the
+power to the motors and the flight controller decides how much power to
+give to the motors based on all the sensor calculations and whatnot so that's basically the brain of the
+Drone then a few more components we have the battery receiver camera and video transmitter the video transmitter will
+transmit the video the camera will supply the video the receiver will be at the remote control end where you will
+receive the video or the signals and then we have the battery which actually allows you to power your drone very
+basic stuff that we have uh then we have drone programming so how exactly can you
+program a drone now there are two types of drone that I like to categorize uh
+this category in the first one is DIY hobby style so what you do is you create
+your uh model and you can attach different Motors you can attach
+different controllers different batteries and it is basically uh do it yourself get a DIY project that you can
+do and you can even 3D print and assemble it all and so on the other category I like to call it plug-and play
+so basically you buy it off the shelf and you just start by pressing the
+button and that's it now you can start programming so if you are a beginner
+then definitely this is much more better for you that you buy something off the
+shelf and you get up and running before you go into the more advanced stuff so
+let's actually compare a bit of these so that we understand which is better for
+which now for drone programming if you're doing with the DIY kit then there
+is a steep learning curve you will have to learn about how to assemble the Drone
+and not only that you will have to write your own software along with all the calculations and the tuning the tuning
+parameters are a great deal for uh flying the drones so you might have
+heard of PID and other techniques that you actually have to spend a lot more
+time tuning the Drone rather than actually creating it so there's a
+there's a very steep learning curve but if you ask me this is the best way to
+learn if you want to learn everything from start this is the best way to get started because it is flexible you will
+pretty much learn everything uh as you go along the way then uh it is suitable
+for outdoor it is not a safe drone you cannot use it I haven't seen uh a small
+drone that is suitable for indoor environment that is safe as safe as the
+off-the-shelf drones uh then we have uh difficulty for education so it is a bit
+difficult to get started because you will get very weird errors and very
+weird problems when you are creating your own drone right so I back in uh 2014 I created a CNC
+machine and the the big mistake I did I wanted to make it as big as
+possible so that's what I did I created it I I believe 1.5 meters long and then
+half a meter wide and that was the big mistake because you weren't kidding
+yeah I wasn't kidding right so I use the same Motors that you would use for a
+small CNC but then the the result was not very good so the idea is that when
+you do something DIY you learn along the way so don't expect that you will be
+able to run right uh right off and uh everything will be uh you can say
+happily ever after right so you have to many drones have you lost uh while learning uh things we have broken we
+have broken a lot in fact um I flew one of the drones uh in our University that
+I only I was allowed to fly this was the DJI I can't remember it can carry I I
+believe 30 kgs so it was a huge drone right and what we did we emptied the
+football field and we said okay now we will tie up it with a rope and then one
+person will just hold the rope and I will be driving it and looking at the
+results because students they will gather right they don't know what's going on they think that you are an
+expert in everything right so they will gather and it was so scary I would
+actually sweat while flying it off you're like you're like don't don't cut anybody
+up don't cut anybody up because that is actually very um you somebody could
+could get really hurt from that drone it's it's uh very difficult to handle
+that situation anyways yeah um moving one of my favorite movies it's October
+Sky and in that they were building Rockets um you know high school kids
+right and that also you know you know there was always this possibility of somebody getting hurt um so it's an
+interesting movie okay I I haven't watched it I'll definitely check it out October Sky okay
+so uh moving on we have the other type which is off the shelf so off the shelf
+you can get a drone and you can get it up and running it's basically plug-and play you set up it with an app and then
+you can control it with python you can control it with uh Android sdks there's
+a lot of flexibility when it comes to coding because a lot of it has been already done for you but where it lacks
+is the flexibility so you don't know what exactly is going on inside what are the
+controller what are the parameters even the specifications of it you might not know if the company is not actually
+telling you so uh that that part is you can say a little less flexible but it is
+indoor it is safe so uh this drone I have crashed on my face as well so
+hopefully nothing happened getting you should like to know
+the parts intimately detor yeah there you go that you're teaching the
+courses so well when you are testing it out things happen right right right so
+the good thing is it's safe and as soon as it hits you it actually stops and you
+don't get hit a lot uh especially they have a rail they have a plastic rail around it and uh it's safe it's not a
+big deal and it is very easy to set up for Education you can have for example
+10 students with 10 different drones and they can have a competition they can do it for Learning and all of
+that good stuff or they can run them into each other's faces
+allegedly allegedly okay so it seems my connection
+is not good it's not loading the image properly um but is is it readable yeah
+it's readable yeah okay so this is what I want to show you how
+easy it is to get started with programming with drones so there's a very good Library by the name DGI teli
+thanks to all the contributors and the creators of this Library who made it so easy for us to get up and running so
+literally with one two and three lines of code I can have my drone running I
+can have it connected and I can see it's uh stats so all you do is is it is it a
+DGI supported uh one or is it a effort no this is this is a community developed
+one it's a little bit I I would say it's a rapper so it's a bit easier to get
+working with got it yeah so then you can see you simply write t. you call the
+class you create an object and you run that method of connect that's it yeah
+that's how simple it is to get it up and running now if you wanted to fly it you would say move forward I mean can it be
+more simple than this right move forward and then how much do you want to move forward 30 cmers so all of the the
+numbers they are in centimeters so they are mentioning that you move forward 30 centimeters same way you can say move
+backwards uh uh flip uh dance not dance
+but you can do a lot of these things maybe you can create that method of
+dance and it will do something right it will be fun to see anyways so uh this is the basic idea and
+then you also have the coding part where you control the speed rather than the
+actual value because let's say you were following a line so you will not say
+move 1 cmet move 1 cm move 1 cimeter right you would say take a constant
+speed when you have to turn change the speed a little bit change add to that speed change things like that right so
+that's called the RC control in this library and you can basically change the speed of forward and backwards up and
+down uh left and rights and the rotation so you can control four of these speeds
+and that's pretty much all you need so that's how simple it is so this code
+takes off you can write take off to take off it moves at a speed of 50 for 2
+seconds and then lands that's it that's how simple it is to get started with
+drone programming now if you want to learn this you didn't even have to mention uh how what is the height of
+takeoff there are some default good default values yes there is a sensor at
+the bottom that actually uh checks how far you are from the ground and they
+have a default value of how far to lift off when you take off okay so if you
+want it to go further you can write go up and then then you given the value 10
+cm 5 cm and so on got it so that's how simple it is now if you want to learn
+more about this uh actually let me show you the example first so here we have a
+couple of examples uh this is keyboard control for surveillance the Drone is
+taking off and then we are able to control it with a keyboard so I press
+forward it goes forward left it goes left so as you can see I can do some
+surveillance I can take photos I can record a video and then I can bring it
+back home so that's the idea of the keyboard control then we have the face tracking um in which it's not colliding
+with by face which is a good thing it means it's working so here you can see
+it's detecting the face and then it's keeping a fixed distance uh so that it
+is safe as well so this processing the face detection Etc that you're doing on
+the on the computer right and you're sending signal back uh to the Drone to
+do whatever it needs to be done right yes so this is the good thing about this drone so if you were to take um let's
+say an AI model and if you wanted to embed it to this drone then the cost of
+this drone will get very expensive yeah so you would need like even a VR right
+now if you want good amount of screen you good want good amount of computation
+it gets more expensive like the Apple Vision Pro right so this is the tradeoff
+that this drone does not process anything on the Drone itself apart from
+how to move around yeah what it does it it sends signal through Wi-Fi and your computer actually does the processing so
+that's why this drone uh I believe it's $99 yeah9 what's the latency on this thing
+um you know when the latency yeah is actually very low uh at if your Wi-Fi is
+good it you won't actually feel it and there are a couple of methods where you
+can reduce this by adding uh a thread so you have separate threads running
+separate processes so that's why you will have a better response so that's
+one of the ways anyways so um these are the two projects and then we have
+another two projects again all of these are done with the same library with the same
+drone using those same commands is just that we added some python code along with it along with open CV code which
+allowed us to do this so it has a camera on top of it now the good thing is the
+camera if you if you look at the Drone in fact if I have the Drone it's wild to me that these are
+just $99 I I can't believe it yeah exactly it's so cheap so the Drone
+itself you can see this is the Drone so the Drone
+itself you can see has a camera in the front that looks forward right but if
+you look at the line following it's pointing down so how is it looking down
+so that's the magic of 3D printing so you can see we have a 3D printed part
+here which has a glass attached here oh nice a mirror a mirror a miror yeah so
+and it's looking down yeah so again we are using open CV with that and this is
+simple image processing no Ai No fancy programming just some Contours some area
+detection and uh trying to figure out um if you have worked with line following
+robots it's very similar to that where you have like five sensors and you check
+which one is on and which one is off so the line following Works in a similar manner so it divides it up into regions
+which are white which are black and based on that it says this part is on this part is off and so on right quite
+interesting I mean uh a simple uh application here uh especially for
+educational application you could uh add April tags on the ground right so that it Go markers something Aro markers yeah
+uh so that it goes and says oh I'm I'm at number one number two number three so I'm at the right and it goes follows
+some trajectory and comth hate hay drone bother moraza just you go over to the QR
+code next to so that way the the the thing with that kind of uh approach is
+that you know you will not uh uh the the you can you can have arbitrary path
+without much work right you could have these patches right you could have these squares you just put the squares in
+arbitrary order and uh if uh it is not an impossible path then the drone can
+follow yes exactly so in fact uh there are two versions of this drone the one
+that I have right now is the edu version and it comes with something like this it comes with these pads which you can
+place on the floor oh nice and they all they have some program that actually detects that and you can have a fixed
+path okay try to find that and then go left go right you know uh specifically
+for for high school or I would say middle school students it's it's a great
+way to get started right so uh these are some of the projects that you can make
+as well right away because all of this is for free you can go and get started
+uh just write drone programming and then this video will show up it's a three-hour course and uh you can see how
+lucky I got here three three three if I had only one more three one
+more three you know yeah just one more three so did you did
+you realiz if I knew this beforehand yeah yeah I realized it later somebody actually commented that and I was like
+oh if I had known I would have made it 333 nice and and a bonus we have three
+years now okay so so anyways so it's
+free for everyone you can go ahead and uh it is using open CV it's free to use
+and you can can get started right away and the good thing is that this drone is
+so widely available that you can pretty much get it from your local hardware or
+electronic Source nowadays it's very easy to find these right but a lot of
+people ask me Amazon yeah these days Amazon because I
+I I don't remember the last time I had gone to uh any of the actually I I've
+been there I've been to Best Buy uh in the last one year but yeah but you you live in the you live out in the BBS
+though like in the city you know we've got coal Hardware here in San Francisco I wish they had drones I should I should
+suggest it yeah so so that's the good thing about this that you can actually get it very
+easily and get started right away without well you will have to pay for the Drone not without paying anything
+but yeah so now let's go on to the Future what exactly is the future
+because we discussed earlier that Dron are failing and then we had a discussion
+of roughly one hour that how to use drones so that doesn't make any sense
+right so we will make S we'll make sense of it in a short while okay so the
+future what exactly do I personally think is going to happen first of all AI is going to the
+drones so drones now will have to decide what exactly is happening in the
+environment like we use our llm models we use our uh diffusion models they are
+able to uh not the diffusion model but other models that can basically tell you
+the semantics of the given environment so once we have the AI running on our
+drone it can classify it can detect objects it can tell the situation then
+we will be able to take advantage of it a lot more and that's already happening
+and that is one of the things we are teaching in our new Kickstarter course how to add AI to the Drone so that you
+can leverage that uh capability and imagine you have an AI uh what do you
+call personal assistant that actually hovers around you and follows you around
+and you just give them the task to do they set it up and you know it will be
+quite futuristic to see that quick question in the course uh you're using the same drone that you had shown right
+so the uh the AI would be running on the machine the T yes okay and that it has
+it has an Intel CPU in there it has an Intel CPU by my understanding is that
+correct yes that is correct so the the idea is that mostly it's about the
+educational part yeah but when it comes to implementation then of course you can
+take the bigger drones and use the same code the only code that you need to
+change is how do you communicate with the Drone so the one that we saw earlier
+me. connect. how do you do that with the other drone right so that's why I
+say that pretty much 80 to 90% of the course is about drones not the T drone
+it's about how to program drones rather than the t drone
+so why did we say in the beginning that this is not a good idea for drones to
+move around and they are shutting down their facilities big companies like DHL and Amazon they are shutting down why
+did we say that because they are focusing on the delivery part now delivery is a very challenging task
+because not everyone has a backyard where you can just throw something right
+people live in buildings people live in small homes and there there's a lot of
+region where it's not allowed to fly at all right especially within the cities
+uh when you have some confidential areas or uh where there's a lot of air traffic
+it's not actually allowed to fly very very big trouble big trouble
+yeah so if you want delivery to be happening uh worldwide and uh throughout
+the country then you need pretty much access to the whole country you can't just pick and place that okay I want to
+do it in this city and not that City uh because when you take the
+average um there was a survey in which they asked people do you want your delivery
+to be one day and expensive or do you want it to be cheaper but you will wait
+two days so most of the people more than 80% of the people said we don't want it
+right away we will want the cheaper option and we will want it after two
+days right and even in my case if you ask me I would pretty much 90% of the time I would say I would wait another
+day uh and I will get the cheaper option so these drones they are not that cheap
+to right now to fly and getting these permits is a very difficult task especially in a country like us or UK
+where laws are very strict right so that's why it is becoming more and more difficult for these companies to get
+these delivery drones up and running right but that's not the end of the world right right so what else can we do
+apart from delivery that's the main question so there we have the answer and
+for some people it may be you know uh I get my package and the Drone for free yeah yeah like to add a drone to
+your order yeah yeah you know there are so many issues like the noise itself is
+a big issue yeah the drones they make a lot of noise so when some drone is
+delivering in the neighborhood the motor the more noise yeah exactly and then there's an issue of
+perfection what what you need to drop off is perfection because you cannot hit
+a person you cannot hit a car you cannot just throw it in maybe a garbage b or
+even in the bushes right you need near there's also animals out there that may
+be interested in the Drone and come up and yeah yeah or maybe in the package
+when it's dropped off the an might be interested in the package dep you know
+maybe got a big a big shipment of Smoked Meats you know yeah
+yeah so so as you see there's a lot of issues so what we can do is a few of the
+examples are rescue surveillance agriculture emergency delivery highspeed
+Chase and education so what we will do is we will have a brief look at each one of important one I think uh you could
+add to the list is inspection so some like windmills Etc they are very difficult to and even Bridges Etc
+they're extremely difficult to inspect and right now humans you know they either climb or they're through
+helicopters and things like that exactly and that is an important I I guess that would come in the surveillance part Sur
+so yeah if you are roaming around looking for something so uh let's talk
+about rescue so I'm pretty sure everyone has watched Iron Man one this was back in
+2008 so this is the scene from that movie where he got lost he flew and he
+dropped out in the desert and he's nowhere to be found so how did he get F uh found using
+a helicopter right so they had a rescue operation they actually flew the
+helicopter here and there to find the person missing so the same thing could
+be done with a drone with much less cost and the similar concept if you are
+saying that this is fictional there's a movie by the name 127 Hours have you
+guys seen that yeah that's a that is a a very tense movie yeah it is difficult to
+watch I would say so the the the movie was that a person he gets stuck in one
+of the mountain regions and uh he didn't have any signals yeah yeah and his arm
+got stuck now I will not spoil it for you if you want to watch it but uh the idea was
+that then they couldn't find him and he had to rescue himself out of there how he did it you can watch the movie but if
+we had a drone it might have been easier to find someone who is missing
+specifically in these areas where it's difficult to take a car or uh even a
+helicopter so that is one of the aspect ects of drones the other one is
+surveillance uh it might be of a big house uh if you are rich you have um
+acres of land then yeah you can have it as a surveillance drone the other
+surveillance goes where you can find out where exactly is a fire when you see
+some smoke uh sometimes there are power Cuts in these um power lines and you
+have to find where exactly the transmission got cut so all these things can come under the surveillance part and
+you can have specific um you can say you can get permissions for that to fly in
+that region uh especially in oil rigs and companies that uh do milling and
+drilling of these uh crude oil they have huge facilities and when something goes
+wrong it can be difficult for them to find out where exactly is the leak and how to get to that as quickly as
+possible same with farming and uh you know golf courses is another one where
+they care a lot about you know the quality of the grass Etc and if say sprinkler Etc has gone bad and the grass
+is drying Etc uh it it you can you can miss out these things can a national
+parks and and Parks here in the city like Golden Gate Park especially if like in California they're susceptible to
+wildfires like these these kinds of things are really really important for mitigating the damage those types of
+events can cause yes a lot of applications uh when it comes to surveillance uh then we also
+have agriculture where as Dr Satya mentioned that uh you can surveil the
+region you can check where exactly is the crop yielding better where are some of the problems and if there is a fire
+or if an animal is moving around all of these things you can basically uh do it
+with a drone and then you can have fixed regions and fixed timings that the Drone
+flies flies out checks comes back reports charges goes out again comes
+back and uh it's basically an infinite Loop you can say uh then we have the emergency
+delivery uh let me turn off the volume
+because okay so then we have the emergency drone and this is
+why Mark Rober was suggesting that this might be the future of drones because
+they have implemented this in some uh rural areas so if you see here I believe
+this is Uganda and they have this drone this is a company called zipline this is
+a drone that actually supplies medical supplies so and it can take off in 90
+seconds so when there is an emergency delivery request till it starts flying
+there's a delay of only 90 seconds that's how fast it can be they have a
+very good facility they are expanding a lot and the way it works is that they
+actually pull it back and they let it fly and it goes so fast that if you were
+they actually showed this in the video by the way it's a very good video you should go check that out they showed in the video that that it took Mark robber
+4 and a half hours to travel the same distance that this drone took only 10
+minutes so it can supply the medical supplies very quickly in these rural
+areas so when it comes to emergency uh deliveries then I believe it is more
+acceptable than I need my PS controller very fast or I need it now right
+compared to those those twox XP weekends don't come every weekend man sometimes you just
+need a controller right now and it's also the perfect one right first of all PE it's an emergency so you need it
+right and these areas rural areas where emergency services are difficult to reach they are also the ones which have
+less obstruction right there could be fields and things right so it's yeah yeah for a drone it's easier to fly
+around these areas compared to a city yeah definitely and this is an example
+of how it throws the package and it bounces off and then it goes back and
+they actually have to catch it using a zip line oh wow because it's so fast which is quite yeah it's so fast so they
+they don't have a u Landing right algorithm or a landing proper wheels or
+something like that you have to catch it with a zip line and you have to pull it back so there's a lot of trial and error
+yeah yeah zip line probably yeah yeah probably yeah uh then we have high highs speeded
+Chase so uh you can have a imagine a police chase now we don't have a lot of
+these here but I believe there's a lot in us so uh there are dangerous high
+speed chase yeah so what what happens is that it's difficult to follow along the
+the C that has been detected but it might go away somehow so what you can do
+is you can fly a drone it can lock that car or whatever it can go under the bridge it can go in weird places and
+then it can keep following and giving the exact location and in some cases it
+could even throw something which could interfere with the wheels to bring the
+car to a halt sure that is one of examples you know not only this I mean
+uh for for police but also for journalists so they fly these helicopters when they have this highs
+speeed Chase going on uh so it becomes very dangerous because you can actually
+the you know it has happened that they've crashed yeah and and you're you're
+correct that in in the US I was just reading a a story about this not long ago that I think something like over
+7,000 people have been injured in police Pursuits that weren't involved in the US in the last 20 20 years it's not that
+it's not that many but years but still like that's those were just those were just Inn bystanders those were just
+people that you know police uh put into danger by by doing these chases sometimes so
+yeah yeah definitely so uh then we have the
+education part so while we have all these uh what do you call agriculture
+surveillance rescue examples the best one I believe to get started with is the
+educational part that it really makes the programming part very intuitive and very engaging so that
+uh engineers and students they get involved right away in this Arena so if
+you uh program or if you program without any hardware it's not as fun as if you
+do it with any hardware for example a drone so uh I will share a video later
+on that will show this inaction where they have an Institute and students are
+programming they're having a good time and so on in fact I also did a post a
+community post around two weeks back to check uh if people actually prefer
+learning programming through drones and you can see 81% said it's more engaging
+um 133% said kind of and 6% said no we should stick to uh basic programming so
+as you can see there's a lot of potential in education as well okay so now I believe is the time
+for the video and uh I I cannot play it here unfortunately so if Phil if you can
+play it if I can send you the link and you can play it you got it
+okay so let me see how can I send you
+here you just post it in the chat here that's fine
+so this video is actually our Kickstarter video so we haven't really shown this a
+lot it will be launching very soon but because you have stuck around with us a
+lot and uh we are going to give you a special sneak peek of our course so this
+course is basically about uh embedding AI with
+drones and this will be launching very soon in a few days so I
+believe you have the link yeah pull it up I'll go ahead and share yep you got
+it and after that we can have the Q&A
+mhm all right I am sharing it
+now so you may have to remove the spotlight
+yep okay which tool are you using mza for uh streaming uh the one that's
+removing your background and putting uh it's obvious is this uh can people see
+this yeah uh did you hear me it's OBS it's the Tool's name is not OB right
+he's just using OBS it's OB open broadcasting yeah all right can can everybody see this I'm G to go ahead and
+hit play yeah okay thanks 3 years ago I
+found a loophole in YouTube when I looked for videos teaching how to program drones I did not find any course
+that covered the basics along with some projects so I decided to make my my own course and put it on YouTube now to my
+surprise it became the most popular drone programming course on YouTube and with time it became the top search
+result on Google as well seeing how much people likeed the first course I made a
+more advanced version of this this new course taught more upto-date topics like
+making drones recognize faces understanding hand gestures and following body movements people from all
+around the world loved it and this became my top selling course on stev's own platform reaching people in over 80
+different countries now you might think that the smart move here would be to make another drone course to earn more
+money but I did not want to make a new course just for that reason so for the next 2 years I did not make any new
+drawn courses but now things are changing with all the new advancements happening in artificial intelligence I
+realized it was time for another Advanced course dedicated to this topic so I'm making a brand new course about
+drone program in with artificial intelligence this means I will teach you how to make drones smarter like being
+able to spot different objects fly through obstacles and do real world tasks and even fly in groups with other
+drones this course will include exciting projects that focus on practical challenges such as navigating through an
+obstacle course to test precision and control developing solutions to quickly
+detect fire in a simulated City environment employ ing AI to accurately count the number of cars crossing a road
+and programming multiple drones to create a drone show these projects are designed to provide hands-on experience
+with real world applications enhancing your skills in drone programming and AI
+technology since conceptual learning is becoming more popular in many high schools and universities these
+institutes are now adding drone programming into their curriculum this is done to improve the learning process
+this trend has gained so much attention that it has been featured on different news channels there are even specialized
+institutes dedicated solely to teaching drone programming whether you are learning on your own or you are part of
+an educational institute I will teach you everything you need to get started with AI drone programming there are
+three versions of this course the first version is the AI drone Basics here you will learn to build your own AI models
+and deploy them to the Drone using the correct programming techniques the second version the AI drone Advanced
+takes you deeper into the subject with more complex projects it focuses on real world applications and navigating
+obstacle courses with drones the third version is the AI drone educator this
+package comes with a teaching license and written material to support the learning process as well making it
+easier to integrate this into any existing curriculum each version of this course is tailored to meet different
+needs and levels of expertise ensuring that every everyone from Learners to educational institutes can find the
+perfect fit for their drone programming education Journey with all the AI courses you will get the free version of
+the YouTube drone programming course without any ads if you are starting from the very Basics we recommend to go for
+the full pack that includes previous YouTube course and the paid Advanced course and the complete AI course at a
+big discounted price I'm very thankful to all the backers of my previous Kickstarter campaign computer vision web
+development that raised $36,000 last year I hope you will support this campaign to help it come to
+life all the packages are offered at a 50% off exclusively for Kickstarter so
+if you are interested in this topic of the future then this is the right time to get on board if you like to support
+the project without any backing then please do consider sharing it with your projects to help spread the word thank
+you for your support and I will see you in the course
+that's a very well made video yeah thank you looks good we' we've made a few
+where I wouldn't I mean I think I think we count as experts at this point a like in terms of uh right definitely well
+well this a very well made video yeah I agree definitely thank you that's the basic idea that getting Ai and drones
+together to actually Implement them with real world applications yeah for beginners as well as for I think uh high
+school students uh this could be very very useful yeah I think my nephews
+might might be interested in this I'm looking forward to talking with them about it later so when does The kickstar
+Campaign launch so uh it will be within this month so we are fixing the date yet
+we haven't fixed the date yet so hopefully within this month yeah all
+right um I'm looking forward to it and I think you know I'm I'm probably going to
+do this for my kids as well I'll buy one of those drones and go to your uh YouTube free free YouTube uh course and
+at least get started and then when this thing happens right uh we can definitely the the first thing is to get that video
+because it actually tells you a lot so there's no need to go and go for the AI
+right away so you have to learn the basics first and then you move on to the more advanced stuff that's awesome yeah
+makes sense to me um I think now is a great time to do our our giveaway we've
+got uh we've got three giveaways today you like to tell people what our winners will get today
+Raza so uh let me actually share the screen uh and let me show you the course
+itself so we are giving away our previous course that is paid the
+computer vision drone programming
+course so it has a lot more techniques some
+Advanced Techniques uh that will show you how to do face tracking body tracking how to do gesture control so
+for example uh if I do this it should do a certain task uh for example it can
+flip or do something else so you can pretty much create games out of this and
+have challenges uh for students to try out so that the basic idea behind uh
+creating this course so if you can see this is the advanced drone programming
+course I'm not sure what's going on with my net so uh yeah so this is the basic idea
+you will learn how to detect different poses you will learn how to create a selfie drone body
+following uh then basically it is following your complete body then phase
+following there's a easy version you would say a normal face detection and then there is some Advanced pH detection
+which can detect from the side as well then uh you will learn how to implement
+P ID control which is very important and uh not only that we have a library by
+the name CV Zone that allows you to plot these uh PID response as well so it it's
+very intuitive to see how well your P ID actually performs so you can find units
+to get better results so that's the basic idea of this course and um it is I
+I I believe it is the number one selling course on our platform at this point
+till this point yeah awesome so you will be getting three of these so I believe
+Phil will tell you how exactly can you get those that's right so we are going to ask three questions or uh is it do
+you think we should take the first three correct answers or do you think we should ask three questions I've got three questions questions let's do three
+questions all right let's do it okay of course if you win the first don't answer
+yes yes so if you uh if you're just joining us for the first time or you need a reminder one of the things we do on this show every single episode is
+give away something to you in the audience our illustrious guest is going to give away three copies of the Drone
+coding course that we just talked about there and I'm going to ask three trivia questions to you in the audience in Zoom
+the first person to answer each question correctly will win one of those courses
+um because this is a special one I think I'm going to remove the Restriction if you've won in the last couple months feel free to answer um but if you win
+the first one or the second one do not answer the third one I think that's only fair um so get ready to answer here in
+the zoom chat if I say something oh yeah please
+do yeah just one more thing uh is the screen visible yes it is yes we can
+Spotlight yeah so so if you want to follow the kickstarter you can go to our website which is computervision dozone
+and you can click on the kickstarter page so that will open up the kickstarter and uh you can simply click
+on uh notify me on launch excent so that you can get notified uh when the course
+launches yeah go ahead and share that link in the chat yeah feel free to yeah I will in the
+chat okay so get ready to answer um
