@@ -4,6 +4,10 @@ from openai import OpenAI
 from dotenv import load_dotenv, find_dotenv
 import os
 import re 
+import time 
+
+# start time 
+start_time = time.time()
 
 def find_answer(input_context, question, openai_api_key):
     # set client
@@ -51,8 +55,8 @@ if (len(openai_api_key.strip()) == 0) :
     exit()
 
 # define parameters 
-episode = '127'
-question_idx='3' # use '' empty string if only 1 ques asked in the episode
+episode = '128'
+question_idx='' # use '' empty string if only 1 ques asked in the episode
 context_filepath  = f'./samples/opencv_live_episode_{episode}/context.txt' # shortened_context.txt
 question_filepath = f'./samples/opencv_live_episode_{episode}/question{question_idx}.txt'   
 
@@ -66,3 +70,8 @@ with open(question_filepath) as fh :
 
 answer = find_answer(input_context, question, openai_api_key)
 print("answer:", answer)
+
+# end time 
+end_time = time.time()
+elapsed_time = end_time-start_time
+print('elapsed_time:', elapsed_time)
